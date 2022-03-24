@@ -1,15 +1,15 @@
 public class Team {
 
     public String teamName;
-    public ArrayList<Player> players = new ArrayList<>();
+    public Player player1;
+    public Player player2;
 
-    public Team(String teamName){
-        this.teamName = teamName;
-    }
 
-    public Team(String teamName, ArrayList<Player> players){
+    public Team(String teamName, Player player1, Player player2){
+        if (teamName.isBlank()){throw new IllegalArgumentException("The team needs a name");}
         this.teamName = teamName;
-        this.players = players;
+        this.player1 = player1;
+        this.player2 = player2;
     }
 
     public String getTeamName() {
@@ -26,15 +26,5 @@ public class Team {
     }
 
     // Legg inn remove metode?
-
-    /* if (players.size() == 2){
-    }
-    else if (players.size() == 1){
-        throw new IllegalArgumentException("You have registered one player. Please register in a singles match instead.");
-    } else if(players.size() > 2){
-        throw new IllegalArgumentException("Too many players registered.The maximum is 2 players.");
-    } else if(players.size() < 1){
-        throw new IllegalArgumentException("You haven't registered any players.");
-    } */
 
 }

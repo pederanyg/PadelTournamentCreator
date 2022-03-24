@@ -2,6 +2,9 @@ import java.util.Scanner;
 
 public class Tournament {
 
+}
+
+    /*
     public static void main(String[] args) {
         Tournament tournament = new Tournament();
         while (true) {
@@ -38,5 +41,4 @@ public class Tournament {
         System.out.println("Player 2 Name: ");
         String player2 = in.nextLine();
     }
-
-}
+    */
