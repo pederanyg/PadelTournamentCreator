@@ -1,10 +1,16 @@
 public class Player {
-    public String name;
+
+    public String firstName;
+    public String lastName;
     public int age;
     public String gender;
 
-    public void player(String name, int age, String gender){
-        this.name = name;
+    public Player(String firstName, String lastName, int age, String gender){
+        if (firstName.isBlank()||lastName.isBlank()){throw new IllegalArgumentException("The player needs a full name!");}
+        if (age<0){throw new IllegalArgumentException("The player cannot be lower than 0.");}
+        if (gender.isBlank()){throw new IllegalArgumentException("The gender must be spesified.");}
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
         this.gender = gender;
     }
