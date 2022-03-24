@@ -1,11 +1,9 @@
 public class Team {
 
     public String teamName;
-    public ArrayList<Player> players = new ArrayList<>();
+    public Player player1;
+    public Player player2;
 
-    public Team(String teamName){
-        this.teamName = teamName;
-    }
 
     public Team(String teamName, ArrayList<Player> players){
         this.teamName = teamName;
