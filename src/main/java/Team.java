@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-
-public class Team extends Player {
+public class Team {
 
     public String teamName;
     public ArrayList<Player> players = new ArrayList<>();
@@ -18,30 +16,25 @@ public class Team extends Player {
         return teamName;
     }
 
-    public void addAll(ArrayList<Player> players){
-        this.players.addAll(players);
-    }
-
-    public void add(Player player) {
-        players.add(player);
-    }
-
-    // Legg inn remove metode senere?
-
-   /* public ArrayList<Team> tournamentTeams(){
-
-        if (teams.size() == 2){
-            this.teams.add(player);
+    public void changePlayerOneWithTwo(Player one, Player two){
+        if (two.equals(player1)){
+            player1 = one;
         }
-        else if (teams.size() == 1){
-            throw new IllegalArgumentException("You have registered one player. Please register in a singles match instead.");
-        } else if(teams.size() > 2){
-            throw new IllegalArgumentException("Too many players registered.");
-        } else if(teams.size() < 1){
-            throw new IllegalArgumentException("You haven't registered any players.");
+        else if (two.equals(player2)){
+            player2 = one;
         }
     }
 
-    */
+    // Legg inn remove metode?
+
+    /* if (players.size() == 2){
+    }
+    else if (players.size() == 1){
+        throw new IllegalArgumentException("You have registered one player. Please register in a singles match instead.");
+    } else if(players.size() > 2){
+        throw new IllegalArgumentException("Too many players registered.The maximum is 2 players.");
+    } else if(players.size() < 1){
+        throw new IllegalArgumentException("You haven't registered any players.");
+    } */
 
 }
