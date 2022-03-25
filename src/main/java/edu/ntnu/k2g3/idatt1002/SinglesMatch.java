@@ -1,3 +1,5 @@
+package edu.ntnu.k2g3.idatt1002;
+
 public class SinglesMatch {
 
     private Player playerOne;

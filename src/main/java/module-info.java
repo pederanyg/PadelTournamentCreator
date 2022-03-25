@@ -1,4 +1,4 @@
-module com.example.padeltournamentgenerator {
+module edu.ntnu.k2g3.idatt1002.Controllers {
     requires javafx.controls;
     requires javafx.fxml;
 
@@ -7,6 +7,8 @@ module com.example.padeltournamentgenerator {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
 
-    opens com.example.padeltournamentgenerator to javafx.fxml;
-    exports com.example.padeltournamentgenerator;
+    opens edu.ntnu.k2g3.idatt1002 to javafx.fxml;
+    exports edu.ntnu.k2g3.idatt1002;
+    opens edu.ntnu.k2g3.idatt1002.Controllers to javafx.fxml;
+    exports edu.ntnu.k2g3.idatt1002.Controllers;
 }

@@ -86,7 +86,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                com.example.padeltournamentgenerator/com.example.padeltournamentgenerator.HelloApplication
+                                com.example.padeltournamentgenerator/edu.ntnu.k2g3.idatt1002.PadelTournament
                             </mainClass>
                         </configuration>
                     </execution>
