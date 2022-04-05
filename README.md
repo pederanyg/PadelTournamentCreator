@@ -4,7 +4,7 @@ The app is developed using Java and JavaFX.
 ## Authors
 
 - Anna Marie Bøe Tvedt
-- Jens Christian Lund
+- [Jens Christian Lund](https://gitlab.stud.idi.ntnu.no/jenscl)
 - Magnus Fikse Forbord
 - Nils William Ormestad Lie
 - Peder Arentz Nygaard
