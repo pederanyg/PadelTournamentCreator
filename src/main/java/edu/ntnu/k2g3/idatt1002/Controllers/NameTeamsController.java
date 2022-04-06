@@ -77,11 +77,11 @@ public class NameTeamsController{
 
     @FXML
     public void goToTournament(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament.fxml").toURI().toURL();
+        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament8.fxml").toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         root = loader.load();
-        TournamentController nameTeamsController = loader.getController();
-        nameTeamsController.displayTeamNames(listOfTeams.getItems());
+        //TournamentController nameTeamsController = loader.getController();
+        //nameTeamsController.displayTeamNames(listOfTeams.getItems());
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);

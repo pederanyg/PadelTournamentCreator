@@ -74,14 +74,6 @@ public class TournamentController {
 
     @FXML
     public void initialize() {
-        line1team1.setVisible(false);
-        line2team1.setVisible(false);
-        line1team2.setVisible(false);
-        line2team2.setVisible(false);
-        line1team3.setVisible(false);
-        line2team3.setVisible(false);
-        line1team4.setVisible(false);
-        line2team4.setVisible(false);
         finalWinnerLine1.setVisible(false);
         finalWinnerLine2.setVisible(false);
         winnerBracket1.setText("");
