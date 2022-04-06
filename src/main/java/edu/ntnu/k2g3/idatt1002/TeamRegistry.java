@@ -1,19 +1,30 @@
 package edu.ntnu.k2g3.idatt1002;
 
-import java.util.ArrayList;
+import java.util.HashSet;
 
 public class TeamRegistry {
 
-    public ArrayList<Team> teams = new ArrayList<>();
+    private final HashSet<Team> teams;
 
-    public ArrayList<Team> getTeams() {
+    public TeamRegistry(){
+        teams = new HashSet<>();
+    }
+
+    public HashSet<Team> getTeams() {
         return teams;
     }
 
-    public Team addNewTeam(String teamName, Player player1, Player player2){
-        Team newTeam = new Team(teamName, player1, player2);
-        teams.add(newTeam);
-        return newTeam;
+    public boolean addNewTeam(String teamName, Player player1, Player player2){
+        return teams.add(new Team(teamName, player1, player2));
+    }
+
+    public boolean removeTeam(String teamName){
+        for (Team team: teams) {
+            if (team.getTeamName().equalsIgnoreCase(teamName)){
+                return teams.remove(team);
+            }
+        }
+        return false;
     }
 
 

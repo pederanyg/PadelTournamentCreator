@@ -2,13 +2,30 @@ package edu.ntnu.k2g3.idatt1002;
 
 public class DoublesMatch {
 
-    private Team teamOne;
-    private Team teamTwo;
+    private final Team teamOne, teamTwo;
     private Team winner;
+    private String result;
 
     public DoublesMatch(Team teamOne, Team teamTwo) {
         this.teamOne = teamOne;
         this.teamTwo = teamTwo;
+    }
+
+    public Team getTeamOne() {
+        return teamOne;
+    }
+
+    public Team getTeamTwo() {
+        return teamTwo;
+    }
+
+    public Team getWinner() {
+        return winner;
+    }
+
+    public void setWinner(Team winner, String result) {
+        this.result = result;
+        this.winner = winner;
     }
 
     public void setDoublesResult(Team winner){
@@ -20,7 +37,6 @@ public class DoublesMatch {
 
     @Override
     public String toString() {
-        return "Match {" +
-                "Team One = " + teamOne + " | Team Two = " + teamTwo + "}";
+        return teamOne.getTeamName() + " vs " + teamTwo.getTeamName();
     }
 }
