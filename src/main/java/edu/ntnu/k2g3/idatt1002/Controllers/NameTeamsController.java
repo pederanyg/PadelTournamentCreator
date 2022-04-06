@@ -63,6 +63,7 @@ public class NameTeamsController{
     public void addTeamToListOfTeams() {
         listOfTeams.getItems().add(nameTeamField.getText());
         choiceBox.getItems().remove(choiceBox.getSelectionModel().getSelectedItem());
+        nameTeamField.clear();
         if(choiceBox.getItems().size() == 0) {
             startButton.setVisible(true);
             choiceBox.setVisible(false);

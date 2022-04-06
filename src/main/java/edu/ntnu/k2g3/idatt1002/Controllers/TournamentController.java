@@ -84,8 +84,8 @@ public class TournamentController {
         line2team4.setVisible(false);
         finalWinnerLine1.setVisible(false);
         finalWinnerLine2.setVisible(false);
-        winnerBracket1.setVisible(false);
-        winnerBracket2.setVisible(false);
+        winnerBracket1.setText("");
+        winnerBracket2.setText("");
         winnerFinal.setVisible(false);
         winnerBracket1Spinner.setVisible(false);
         winnerBracket2Spinner.setVisible(false);
