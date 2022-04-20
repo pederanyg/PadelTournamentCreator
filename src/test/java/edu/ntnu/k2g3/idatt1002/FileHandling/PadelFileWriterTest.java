@@ -6,6 +6,8 @@ import edu.ntnu.k2g3.idatt1002.Team;
 import edu.ntnu.k2g3.idatt1002.TeamRegistry;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PadelFileWriterTest {
@@ -18,6 +20,11 @@ public class PadelFileWriterTest {
     @Test
     public void writeTeamRegistryToFile() {
         PadelFileWriter.writeTeamRegistryToFile("src/test/resources/testTeam.csv", createTeamRegistry());
+    }
+
+    @Test
+    public void writeTeamNamesToFile(){
+        PadelFileWriter.writeTeamNamesToFile("src/test/resources/testTeamNames.csv", createListOfTeams());
     }
 
     private PlayerRegistry createPlayerRegistry(){
@@ -38,4 +45,19 @@ public class PadelFileWriterTest {
         registry.addNewTeam("team6", new Player("anna", "tvedt"), new Player("helle", "Tvedt"));
         return registry;
     }
+
+    private ArrayList<String> createListOfTeams() {
+        ArrayList<String> teamNames = new ArrayList<>();
+        teamNames.add("Helle");
+        teamNames.add("Finn");
+        teamNames.add("pål");
+        teamNames.add("per");
+        teamNames.add("anna");
+        teamNames.add("jens");
+        return teamNames;
+    }
+
+
+
+
 }

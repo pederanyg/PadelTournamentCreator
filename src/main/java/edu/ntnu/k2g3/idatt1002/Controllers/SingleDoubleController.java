@@ -17,15 +17,10 @@ import java.net.URL;
 
 public class SingleDoubleController {
     @FXML
-    private RadioButton singlesButton;
-    @FXML
-    private RadioButton doublesButton;
+    private RadioButton singlesButton, doublesButton;
+
     @FXML
     private Button confirm;
-
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     @FXML
     private void initialize() {
@@ -40,13 +35,11 @@ public class SingleDoubleController {
         confirm.setDisable(false);
     }
 
-
-
     public void goToNumberOfTeams(ActionEvent event) throws IOException {
         URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/numberOfTeams.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

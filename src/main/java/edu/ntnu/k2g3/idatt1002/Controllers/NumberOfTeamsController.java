@@ -16,35 +16,34 @@ import java.io.IOException;
 import java.net.URL;
 
 public class NumberOfTeamsController {
-    public ChoiceBox choiceBox;
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
+    @FXML
+    public ChoiceBox<Integer> choiceBox;
     @FXML
     private Button confirm;
 
     @FXML
     public void initialize() {
+        choiceBox.getItems().setAll(2,4,8,16);
         confirm.setDisable(true);
     }
 
     @FXML
-    public void teamsSelected(ActionEvent e) {
+    public void teamsSelected() {
         confirm.setDisable(false);
     }
 
     public void goToNameTeams(ActionEvent event) throws IOException {
-        int numberOfTeams = Integer.parseInt((String) choiceBox.getValue());
+        int numberOfTeams = choiceBox.getValue();
 
         URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/nameTeams.fxml").toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
-        root = loader.load();
+        Parent root = loader.load();
 
         NameTeamsController nameTeamsController = loader.getController();
         nameTeamsController.createTeamList(numberOfTeams);
 
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }

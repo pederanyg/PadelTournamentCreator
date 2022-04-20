@@ -1,6 +1,5 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,12 +12,8 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
 
 public class NameTeamsController{
-    private Stage stage;
-    private Scene scene;
-    private Parent root;
 
     @FXML
     private ChoiceBox<String> choiceBox;
@@ -105,9 +100,11 @@ public class NameTeamsController{
             default -> throw new IllegalArgumentException("Number of teams are out of range.");
         }
 
-        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
     }
+
+
 }

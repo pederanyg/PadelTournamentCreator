@@ -4,6 +4,8 @@ import edu.ntnu.k2g3.idatt1002.PlayerRegistry;
 import edu.ntnu.k2g3.idatt1002.TeamRegistry;
 import org.junit.jupiter.api.Test;
 
+import java.util.ArrayList;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class PadelFileReaderTest {
@@ -18,5 +20,11 @@ public class PadelFileReaderTest {
     public void readTeamRegistryFromFile() {
         TeamRegistry registry = PadelFileReader.readTeamRegistryFromFile("src/test/resources/testTeam.csv");
         assertEquals(4, registry.getTeams().size());
+    }
+
+    @Test
+    public void readTeamNames(){
+        ArrayList<String> list = PadelFileReader.readTeamNames("src/test/resources/testTeamNames.csv");
+        assertEquals("Helle", list.get(0));
     }
 }
