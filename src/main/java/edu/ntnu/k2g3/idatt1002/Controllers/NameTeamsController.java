@@ -57,13 +57,16 @@ public class NameTeamsController{
     @FXML
     public void chosenTeam() {
         nameTeamField.setText(choiceBox.getValue());
+        addButton.setDisable(false);
     }
 
     @FXML
     public void addTeamToListOfTeams() {
         listOfTeams.getItems().add(nameTeamField.getText());
         choiceBox.getItems().remove(choiceBox.getSelectionModel().getSelectedItem());
+        choiceBox.valueProperty().setValue(null);
         nameTeamField.clear();
+        addButton.setDisable(true);
         if(choiceBox.getItems().size() == 0) {
             startButton.setVisible(true);
             choiceBox.setVisible(false);
@@ -77,11 +80,30 @@ public class NameTeamsController{
 
     @FXML
     public void goToTournament(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament8.fxml").toURI().toURL();
-        FXMLLoader loader = new FXMLLoader(url);
-        root = loader.load();
-        //TournamentController nameTeamsController = loader.getController();
-        //nameTeamsController.displayTeamNames(listOfTeams.getItems());
+        Parent root;
+        URL url;
+        FXMLLoader loader;
+
+        switch (listOfTeams.getItems().size()) {
+            case 4 -> {
+                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament.fxml").toURI().toURL();
+                loader = new FXMLLoader(url);
+                root = loader.load();
+                TournamentController nameTeamsController = loader.getController();
+                nameTeamsController.displayTeamNames(listOfTeams.getItems());
+            }
+            case 8 -> {
+                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament8.fxml").toURI().toURL();
+                loader = new FXMLLoader(url);
+                root = loader.load();
+            }
+            case 16 -> {
+                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament16.fxml").toURI().toURL();
+                loader = new FXMLLoader(url);
+                root = loader.load();
+            }
+            default -> throw new IllegalArgumentException("Number of teams are out of range.");
+        }
 
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
