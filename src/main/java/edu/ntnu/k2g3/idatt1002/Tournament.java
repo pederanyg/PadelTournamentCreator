@@ -1,13 +1,15 @@
 package edu.ntnu.k2g3.idatt1002;
 
 
-import java.util.HashSet;
-import java.util.Random;
+import edu.ntnu.k2g3.idatt1002.Matches.Match;
+
+import java.util.*;
 
 public class Tournament {
     private HashSet<Team> teams;
     private String name;
-    private HashSet<DoublesMatch> matches;
+    private HashSet<Match> matches;
+    private boolean singlesOrDoubles;
 
     public Tournament(HashSet<Team> teams, String name, HashSet<DoublesMatch> matches) {
         this.teams = teams;

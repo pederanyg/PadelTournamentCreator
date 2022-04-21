@@ -1,31 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.SingleDoubleController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.SingleDoubleController">
     <children>
-        <Label layoutX="112.0" layoutY="14.0" text="Please choose the size of the teams">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Label>
-        <Button layoutX="241.0" layoutY="293.0" mnemonicParsing="false" onAction="#goToNumberOfTeams" text="Confirm" fx:id="confirm">
-            <font>
-                <Font size="24.0" />
-            </font>
-        </Button>
-      <RadioButton layoutX="126.0" layoutY="192.0" mnemonicParsing="false" text="Singles" fx:id="singlesButton" onAction="#enableOkButton">
+      <AnchorPane fx:id="singelsDoublesPane" layoutX="20.0" layoutY="135.0" prefHeight="236.0" prefWidth="559.0">
+         <children>
+              <Button fx:id="confirm" layoutX="221.0" layoutY="158.0" mnemonicParsing="false" onAction="#goToNumberOfTeams" text="Confirm">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+              </Button>
+              <Label layoutX="92.0" layoutY="34.0" text="Please choose the size of the teams">
+                  <font>
+                      <Font size="24.0" />
+                  </font>
+              </Label>
+            <RadioButton fx:id="doublesButton" layoutX="355.0" layoutY="102.0" mnemonicParsing="false" onAction="#enableOkButton" text="Doubles">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="singlesButton" layoutX="100.0" layoutY="102.0" mnemonicParsing="false" onAction="#enableOkButton" text="Singles">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </RadioButton>
+         </children>
+      </AnchorPane>
+      <Label layoutX="75.0" layoutY="14.0" text="Please enter the name of your tournament">
          <font>
-            <Font size="22.0" />
+            <Font size="24.0" />
          </font>
-      </RadioButton>
-      <RadioButton layoutX="361.0" layoutY="192.0" mnemonicParsing="false" text="Doubles" fx:id="doublesButton" onAction="#enableOkButton">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </RadioButton>
+      </Label>
+      <TextField fx:id="tournamentName" layoutX="149.0" layoutY="84.0" promptText="tournament name..." />
+      <Button fx:id="confirmName" onAction="#createTournament" layoutX="343.0" layoutY="84.0" mnemonicParsing="false" text="Confirm" />
     </children>
 </AnchorPane>

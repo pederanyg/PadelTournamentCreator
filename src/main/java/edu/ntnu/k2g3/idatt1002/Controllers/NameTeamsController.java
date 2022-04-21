@@ -69,7 +69,6 @@ public class NameTeamsController{
             nameTeamField.setVisible(false);
             teamNameLabel.setVisible(false);
             teamChooser.setText("All teams have been added.");
-
         }
     }
 

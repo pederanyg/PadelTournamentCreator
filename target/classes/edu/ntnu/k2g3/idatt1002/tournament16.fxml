@@ -76,34 +76,34 @@
         <Line fx:id="line1winner11" endX="144.0" endY="47.199981689453125" layoutX="770.0" layoutY="534.0" startX="93.4000244140625" startY="47.199981689453125" />
         <Line fx:id="line2winner11" endX="103.9000244140625" endY="60.699981689453125" layoutX="759.0" layoutY="521.0" startX="103.9000244140625" startY="-84.60000610351562" />
         <Line fx:id="finalWinnerLine1" endX="96.0" endY="-88.80001831054688" layoutX="699.0" layoutY="492.0" startX="-63.000030517578125" startY="-88.80001831054688" />
-      <Spinner fx:id="spinnerTeam1" onMouseClicked="#setWinnerQuarter1" layoutX="136.0" layoutY="3.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam1" onMouseClicked="#setWinnerRound16nr1" layoutX="136.0" layoutY="3.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Label fx:id="team2" alignment="CENTER" layoutX="87.0" layoutY="141.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 9" />
       <Label fx:id="team1" alignment="CENTER" layoutX="87.0" layoutY="29.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 1" />
-      <Spinner fx:id="spinnerTeam2" onMouseClicked="#setWinnerQuarter1" layoutX="136.0" layoutY="115.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam2" onMouseClicked="#setWinnerRound16nr1" layoutX="136.0" layoutY="115.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Line endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="292.0" layoutY="59.0" startX="-100.0" />
       <Line endX="-8.3857421875" endY="-13.799972534179688" layoutX="292.0" layoutY="188.0" startX="-101.00000762939453" startY="-13.800003051757812" />
       <Line endX="-99.09283447265625" endY="-94.60000610351562" layoutX="382.0" layoutY="256.0" startX="-99.09286499023438" startY="-82.50709533691406" />
       <Line endX="-100.0" endY="35.00000762939453" layoutX="382.0" layoutY="60.0" startX="-100.0" />
-      <Spinner fx:id="spinnerTeam3" layoutX="136.0" layoutY="208.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam3" onMouseClicked="#setWinnerRound16nr2" layoutX="136.0" layoutY="208.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Label fx:id="team4" alignment="CENTER" layoutX="87.0" layoutY="336.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 10" />
       <Label fx:id="team3" alignment="CENTER" layoutX="87.0" layoutY="234.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 2" />
-      <Spinner fx:id="spinnerTeam4" layoutX="136.0" layoutY="310.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam4" onMouseClicked="#setWinnerRound16nr2" layoutX="136.0" layoutY="310.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Line endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="292.0" layoutY="264.0" startX="-100.0" />
       <Line endX="-8.3857421875" endY="-13.799972534179688" layoutX="292.0" layoutY="383.0" startX="-101.00000762939453" startY="-13.800003051757812" />
       <Line endX="-99.09283447265625" endY="-138.60000610351562" layoutX="382.0" layoutY="473.0" startX="-99.09283447265625" startY="-103.09286499023438" />
       <Line endX="-100.0" endY="3.0" layoutX="382.0" layoutY="265.0" startX="-100.0" />
-      <Spinner fx:id="spinnerTeam7" layoutX="141.0" layoutY="594.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam7" onMouseClicked="#setWinnerRound16nr4" layoutX="141.0" layoutY="594.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Label fx:id="team8" alignment="CENTER" layoutX="92.0" layoutY="722.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 12" />
       <Label fx:id="team7" alignment="CENTER" layoutX="92.0" layoutY="620.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 7" />
-      <Spinner fx:id="spinnerTeam8" layoutX="141.0" layoutY="696.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam8" onMouseClicked="#setWinnerRound16nr4" layoutX="141.0" layoutY="696.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Line endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="297.0" layoutY="650.0" startX="-100.0" />
       <Line endX="-8.3857421875" endY="-13.799972534179688" layoutX="297.0" layoutY="769.0" startX="-101.00000762939453" startY="-13.800003051757812" />
       <Line endX="-99.09283447265625" endY="-135.60003662109375" layoutX="387.0" layoutY="859.0" startX="-99.09283447265625" startY="-103.09286499023438" />
       <Line endX="-100.0" endY="6.0" layoutX="387.0" layoutY="651.0" startX="-100.0" />
-      <Spinner fx:id="spinnerTeam5" layoutX="136.0" layoutY="404.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam5" onMouseClicked="#setWinnerRound16nr3" layoutX="136.0" layoutY="404.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Label fx:id="team6" alignment="CENTER" layoutX="91.0" layoutY="529.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 11" />
       <Label fx:id="team5" alignment="CENTER" layoutX="87.0" layoutY="430.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 5" />
-      <Spinner fx:id="spinnerTeam6" layoutX="140.0" layoutY="503.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
+      <Spinner fx:id="spinnerTeam6" onMouseClicked="#setWinnerRound16nr3" layoutX="140.0" layoutY="503.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
       <Line endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="292.0" layoutY="460.0" startX="-100.0" />
       <Line endX="-8.3857421875" endY="-13.799972534179688" layoutX="296.0" layoutY="582.0" startX="-101.00000762939453" startY="-13.800003051757812" />
       <Line endX="-99.09283447265625" endY="-86.60003662109375" layoutX="386.0" layoutY="650.0" startX="-99.09286499023438" startY="-82.50709533691406" />

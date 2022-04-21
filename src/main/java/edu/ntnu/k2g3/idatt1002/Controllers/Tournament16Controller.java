@@ -119,38 +119,123 @@ public class Tournament16Controller {
             spinner.setVisible(false);
         }
     }
-    public void setWinnerQuarter1() {
+    public void setWinnerRound16nr1() {
         if (spinnerTeam1.getValue().equals(6)) {
             spinnerTeam2.setDisable(true);
             spinnerTeam1.setDisable(true);
             line1winner1.setVisible(true);
             line2winner1.setVisible(true);
-            winnerQuarter1.setText(team1.getText());
+            spinnerRoundOf16nr1.setVisible(true);
+            winnerRound16nr1.setText(team1.getText());
+            winnerRound16nr1.setVisible(true);
             winnerQuarter1.setVisible(true);
         } else if (spinnerTeam2.getValue().equals(6)) {
             spinnerTeam1.setDisable(true);
             spinnerTeam2.setDisable(true);
+            spinnerRoundOf16nr1.setVisible(true);
             line1winner1.setVisible(true);
             line2winner1.setVisible(true);
-            winnerQuarter1.setText(team2.getText());
+            winnerRound16nr1.setText(team2.getText());
+            winnerRound16nr1.setVisible(true);
             winnerQuarter1.setVisible(true);
         }
     }
-    public void setWinnerQuarter2() {
+    public void setWinnerRound16nr2() {
         if (spinnerTeam3.getValue().equals(6)) {
             spinnerTeam3.setDisable(true);
             spinnerTeam4.setDisable(true);
             line1winner3.setVisible(true);
             line2winner3.setVisible(true);
-            winnerQuarter1.setText(team1.getText());
+            winnerRound16nr2.setText(team3.getText());
+            winnerRound16nr2.setVisible(true);
+            spinnerRoundOf16nr2.setVisible(true);
             winnerQuarter1.setVisible(true);
-        } else if (spinnerTeam2.getValue().equals(6)) {
-            spinnerTeam1.setDisable(true);
-            spinnerTeam2.setDisable(true);
-            line1winner1.setVisible(true);
-            line2winner1.setVisible(true);
-            winnerQuarter1.setText(team2.getText());
+        } else if (spinnerTeam4.getValue().equals(6)) {
+            spinnerTeam4.setDisable(true);
+            spinnerTeam3.setDisable(true);
+            line1winner3.setVisible(true);
+            line2winner3.setVisible(true);
+            spinnerRoundOf16nr2.setVisible(true);
+            winnerRound16nr2.setText(team4.getText());
+            winnerRound16nr2.setVisible(true);
             winnerQuarter1.setVisible(true);
+        }
+    }
+
+    public void setWinnerRound16nr3() {
+        if (spinnerTeam5.getValue().equals(6)) {
+            spinnerTeam5.setDisable(true);
+            spinnerTeam6.setDisable(true);
+            line1winner4.setVisible(true);
+            line2winner4.setVisible(true);
+            winnerRound16nr3.setText(team5.getText());
+            winnerRound16nr3.setVisible(true);
+            spinnerRoundOf16nr3.setVisible(true);
+            winnerQuarter2.setVisible(true);
+        } else if (spinnerTeam6.getValue().equals(6)) {
+            spinnerTeam5.setDisable(true);
+            spinnerTeam6.setDisable(true);
+            line1winner4.setVisible(true);
+            line2winner4.setVisible(true);
+            spinnerRoundOf16nr3.setVisible(true);
+            winnerRound16nr3.setText(team6.getText());
+            winnerRound16nr3.setVisible(true);
+            winnerQuarter2.setVisible(true);
+        }
+    }
+
+    public void setWinnerRound16nr4() {
+        if (spinnerTeam7.getValue().equals(6)) {
+            spinnerTeam7.setDisable(true);
+            spinnerTeam8.setDisable(true);
+            line1winner5.setVisible(true);
+            line2winner5.setVisible(true);
+            winnerRound16nr4.setText(team7.getText());
+            winnerRound16nr4.setVisible(true);
+            winnerQuarter2.setVisible(true);
+        } else if (spinnerTeam8.getValue().equals(6)) {
+            spinnerTeam7.setDisable(true);
+            spinnerTeam8.setDisable(true);
+            line1winner5.setVisible(true);
+            line2winner5.setVisible(true);
+            winnerQuarter2.setVisible(true);
+            winnerRound16nr4.setText(team8.getText());
+            winnerRound16nr4.setVisible(true);
+        }
+    }
+    public void setWinnerQuarter1() {
+        if(spinnerRoundOf16nr1.getValue().equals(6)) {
+            spinnerRoundOf16nr1.setDisable(true);
+            spinnerRoundOf16nr2.setDisable(true);
+            winnerQuarter1.setText(winnerRound16nr1.getText());
+            line1winner2.setVisible(true);
+            line2winner2.setVisible(true);
+            winnerSem1.setVisible(true);
+        } else if(spinnerRoundOf16nr2.getValue().equals(6)) {
+            spinnerRoundOf16nr1.setDisable(true);
+            spinnerRoundOf16nr2.setDisable(true);
+            winnerQuarter1.setText(winnerRound16nr2.getText());
+            line1winner2.setVisible(true);
+            line2winner2.setVisible(true);
+            winnerSem1.setVisible(true);
+        }
+    }
+
+    public void setWinnerQuarter2() {
+        if(spinnerRoundOf16nr3.getValue().equals(6)) {
+            spinnerRoundOf16nr3.setDisable(true);
+            spinnerRoundOf16nr4.setDisable(true);
+            line1winner12.setVisible(true);
+            line2winner12.setVisible(true);
+            winnerSem1.setVisible(true);
+            winnerQuarter2.setText(winnerRound16nr3.getText());
+        } else if(spinnerRoundOf16nr4.getValue().equals(6)){
+            spinnerRoundOf16nr3.setDisable(true);
+            spinnerRoundOf16nr4.setDisable(true);
+            line1winner12.setVisible(true);
+            line2winner12.setVisible(true);
+            winnerSem1.setVisible(true);
+            winnerQuarter2.setText(winnerRound16nr4.getText());
         }
     }
 }
