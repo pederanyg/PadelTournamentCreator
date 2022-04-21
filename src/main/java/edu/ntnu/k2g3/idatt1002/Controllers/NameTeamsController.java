@@ -18,22 +18,16 @@ public class NameTeamsController{
     @FXML
     private ChoiceBox<String> choiceBox;
 
-    private String[] teamList;
     @FXML
-    private ListView listOfTeams;
+    private ListView<String> listOfTeams;
     @FXML
-    private Button startButton;
-    @FXML
-    private Button addButton;
+    private Button startButton, addButton;
 
     @FXML
     private TextField nameTeamField;
 
     @FXML
-    private Label teamChooser;
-
-    @FXML
-    private Label teamNameLabel;
+    private Label teamChooser, teamNameLabel;
 
     @FXML
     public void initialize() {
@@ -42,16 +36,14 @@ public class NameTeamsController{
 
     @FXML
     public void createTeamList(int numberOfTeams) {
-        this.teamList = new String[numberOfTeams];
-        for(int i = 0; i < numberOfTeams; i++) {
-            this.teamList[i] = ("Team " + (i + 1));
+        for(int i = 0; i < numberOfTeams; i++){
+            choiceBox.getItems().add("Team" + (i + 1));
         }
-        choiceBox.getItems().addAll(teamList);
     }
 
     @FXML
     public void chosenTeam() {
-        nameTeamField.setText(choiceBox.getValue());
+        nameTeamField.setText(choiceBox.getValue()); //set prompt tekst? da må man skrive navn?
         addButton.setDisable(false);
     }
 
