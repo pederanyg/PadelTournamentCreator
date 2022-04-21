@@ -16,6 +16,14 @@ public class Tournament8Controller {
     @FXML
     private Spinner spinnerTeam4;
     @FXML
+    private Spinner spinnerTeam5;
+    @FXML
+    private Spinner spinnerTeam6;
+    @FXML
+    private Spinner spinnerTeam7;
+    @FXML
+    private Spinner spinnerTeam8;
+    @FXML
     private Spinner bracket1Spinner;
     @FXML
     private Spinner bracket2Spinner;
@@ -114,11 +122,138 @@ public class Tournament8Controller {
         winnerLine.setVisible(false);
     }
 
+    @FXML
+    public void decideWinnerBracket1() {
+        if(spinnerTeam1.getValue().equals(6)) {
+            winnerBracket1.setText(team1Label.getText());
+            winnerBracket1.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+            bracket1Spinner.setVisible(true);
+        } else if(spinnerTeam2.getValue().equals(6)) {
+            winnerBracket1.setText(team2Label.getText());
+            winnerBracket1.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+            bracket1Spinner.setVisible(true);
+        }
+    }
 
+    @FXML
+    public void decideWinnerBracket2() {
+        if(spinnerTeam3.getValue().equals(6)) {
+            winnerBracket2.setText(team3Label.getText());
+            winnerBracket2.setVisible(true);
+            spinnerTeam4.setDisable(true);
+            spinnerTeam3.setDisable(true);
+            bracket2Spinner.setVisible(true);
+        } else if(spinnerTeam4.getValue().equals(6)) {
+            winnerBracket2.setText(team4Label.getText());
+            winnerBracket2.setVisible(true);
+            spinnerTeam4.setDisable(true);
+            spinnerTeam3.setDisable(true);
+            bracket2Spinner.setVisible(true);
+        }
+    }
 
+    @FXML
+    public void decideWinnerBracket3() {
+        if(spinnerTeam5.getValue().equals(6)) {
+            winnerBracket3.setText(team5Label.getText());
+            winnerBracket3.setVisible(true);
+            spinnerTeam7.setDisable(true);
+            spinnerTeam5.setDisable(true);
+            bracket3Spinner.setVisible(true);
+        } else if(spinnerTeam7.getValue().equals(6)) {
+            winnerBracket3.setText(team6Label.getText());
+            winnerBracket3.setVisible(true);
+            spinnerTeam7.setDisable(true);
+            spinnerTeam5.setDisable(true);
+            bracket3Spinner.setVisible(true);
+        }
+    }
 
+    @FXML
+    public void decideWinnerBracket4() {
+        if(spinnerTeam6.getValue().equals(6)) {
+            winnerBracket4.setText(team7Label.getText());
+            winnerBracket4.setVisible(true);
+            spinnerTeam8.setDisable(true);
+            spinnerTeam6.setDisable(true);
+            bracket4Spinner.setVisible(true);
+        } else if(spinnerTeam8.getValue().equals(6)) {
+            winnerBracket4.setText(team8Label.getText());
+            winnerBracket4.setVisible(true);
+            spinnerTeam8.setDisable(true);
+            spinnerTeam6.setDisable(true);
+            bracket4Spinner.setVisible(true);
+        }
+    }
 
+    @FXML
+    public void decideWinnerSemi1() {
+        if(bracket1Spinner.getValue().equals(6)) {
+            finalist1.setText(winnerBracket1.getText());
+            finalist1.setVisible(true);
+            bracket1Spinner.setDisable(true);
+            bracket3Spinner.setDisable(true);
+            finalist1Spinner.setVisible(true);
+            line1Bracket1.setVisible(true);
+            line2Bracket1.setVisible(true);
+        } else if(bracket3Spinner.getValue().equals(6)) {
+            finalist1.setText(winnerBracket3.getText());
+            finalist1.setVisible(true);
+            bracket1Spinner.setDisable(true);
+            bracket3Spinner.setDisable(true);
+            finalist1Spinner.setVisible(true);
+            line1Bracket3.setVisible(true);
+            line2Bracket3.setVisible(true);
+        }
+    }
 
+    @FXML
+    public void decideWinnerSemi2() {
+        if(bracket2Spinner.getValue().equals(6)) {
+            finalist2.setText(winnerBracket2.getText());
+            finalist2.setVisible(true);
+            bracket2Spinner.setDisable(true);
+            bracket4Spinner.setDisable(true);
+            finalist2Spinner.setVisible(true);
+            line1Bracket2.setVisible(true);
+            line2Bracket2.setVisible(true);
+        } else if(bracket4Spinner.getValue().equals(6)) {
+            finalist2.setText(winnerBracket4.getText());
+            finalist2.setVisible(true);
+            bracket2Spinner.setDisable(true);
+            bracket4Spinner.setDisable(true);
+            finalist2Spinner.setVisible(true);
+            line1Bracket4.setVisible(true);
+            line2Bracket4.setVisible(true);
+        }
+    }
 
-
+    @FXML
+    public void decideWinnerFinal() {
+        if(finalist1Spinner.getValue().equals(6)){
+            finalist1Line.setVisible(true);
+            winnerLine.setVisible(true);
+            winnerFinal.setText(finalist1.getText());
+            winnerFinal.setVisible(true);
+            winnerDisplay.setVisible(true);
+            winnerDisplay.setText(finalist1.getText() + " is the winning team!");
+            exitTournament.setVisible(true);
+            finalist1Spinner.setDisable(true);
+            finalist2Spinner.setDisable(true);
+        } else if(finalist2Spinner.getValue().equals(6)){
+            finalist2Line.setVisible(true);
+            winnerLine.setVisible(true);
+            winnerFinal.setText(winnerBracket2.getText());
+            winnerFinal.setVisible(true);
+            winnerDisplay.setVisible(true);
+            winnerDisplay.setText(winnerBracket2.getText() + " is the winning team!");
+            exitTournament.setVisible(true);
+            finalist1Spinner.setDisable(true);
+            finalist2Spinner.setDisable(true);
+        }
+    }
 }

@@ -41,6 +41,7 @@ public class Tournament16Controller {
     public Spinner spinnerTeam16;
     public Spinner spinnerTeam15;
     public Spinner spinnerTeam1;
+
     public Label winnerRound16nr6;
     public Label winnerRound16nr5;
     public Label winnerRound16nr2;
@@ -57,22 +58,8 @@ public class Tournament16Controller {
     public Label winnerQuarter4;
     public Label winnerSem1;
     public Label winnerSemi2;
-    public Label team2;
-    public Label team1;
-    public Label team4;
-    public Label team3;
-    public Label team8;
-    public Label team7;
-    public Label team6;
-    public Label team5;
-    public Label team10;
-    public Label team9;
-    public Label team12;
-    public Label team11;
-    public Label team14;
-    public Label team13;
-    public Label team16;
-    public Label team15;
+
+    public Label team1, team2,team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15, team16;
     public Line line1winner1;
     public Line line1winner3;
     public Line line1winner7;
