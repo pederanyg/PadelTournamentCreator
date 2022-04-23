@@ -1,99 +1,54 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileReader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.shape.Line;
 
+import java.util.ArrayList;
+
 public class Tournament8Controller {
     @FXML
-    private Spinner spinnerTeam1;
+    private Spinner<String> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
     @FXML
-    private Spinner spinnerTeam2;
+    private Spinner<String> spinnerTeam5, spinnerTeam6, spinnerTeam7, spinnerTeam8;
     @FXML
-    private Spinner spinnerTeam3;
+    private Spinner<String> bracket1Spinner, bracket2Spinner, bracket3Spinner, bracket4Spinner;
     @FXML
-    private Spinner spinnerTeam4;
+    private Spinner<String> finalist1Spinner, finalist2Spinner;
+
     @FXML
-    private Spinner spinnerTeam5;
+    private Label team1Label, team2Label, team3Label, team4Label;
     @FXML
-    private Spinner spinnerTeam6;
+    private Label team5Label, team6Label, team7Label, team8Label;
     @FXML
-    private Spinner spinnerTeam7;
+    private Label winnerBracket1, winnerBracket2, winnerBracket3, winnerBracket4;
     @FXML
-    private Spinner spinnerTeam8;
+    private Label finalist1, finalist2;
     @FXML
-    private Spinner bracket1Spinner;
+    private Label winnerDisplay, winnerFinal;
+
     @FXML
-    private Spinner bracket2Spinner;
+    private Line line1Bracket1, line2Bracket1;
     @FXML
-    private Spinner bracket3Spinner;
+    private Line line1Bracket2, line2Bracket2;
     @FXML
-    private Spinner bracket4Spinner;
+    private Line line1Bracket3, line2Bracket3;
     @FXML
-    private Spinner finalist1Spinner;
+    private Line line1Bracket4, line2Bracket4;
     @FXML
-    private Spinner finalist2Spinner;
-    @FXML
-    private Label team1Label;
-    @FXML
-    private Label team2Label;
-    @FXML
-    private Label team3Label;
-    @FXML
-    private Label team4Label;
-    @FXML
-    private Label team5Label;
-    @FXML
-    private Label team6Label;
-    @FXML
-    private Label team7Label;
-    @FXML
-    private Label team8Label;
-    @FXML
-    private Label winnerBracket1;
-    @FXML
-    private Label winnerBracket2;
-    @FXML
-    private Label winnerBracket3;
-    @FXML
-    private Label winnerBracket4;
-    @FXML
-    private Label finalist1;
-    @FXML
-    private Label finalist2;
-    @FXML
-    private Label winnerDisplay;
-    @FXML
-    private Label winnerFinal;
-    @FXML
-    private Line line1Bracket1;
-    @FXML
-    private Line line2Bracket1;
-    @FXML
-    private Line line1Bracket2;
-    @FXML
-    private Line line2Bracket2;
-    @FXML
-    private Line line1Bracket3;
-    @FXML
-    private Line line2Bracket3;
-    @FXML
-    private Line line1Bracket4;
-    @FXML
-    private Line line2Bracket4;
-    @FXML
-    private Line finalist1Line;
-    @FXML
-    private Line finalist2Line;
+    private Line finalist1Line, finalist2Line;
     @FXML
     private Line winnerLine;
+
     @FXML
     private Button exitTournament;
 
     @FXML
     public void initialize() {
+        displayTeamNames();
         finalist1Line.setVisible(false);
         finalist2Line.setVisible(false);
         winnerBracket1.setText("");
@@ -120,6 +75,17 @@ public class Tournament8Controller {
         finalist1.setVisible(false);
         finalist2.setVisible(false);
         winnerLine.setVisible(false);
+    }
+
+    @FXML
+    public void displayTeamNames() {
+        ArrayList<String> listOfNames = PadelFileReader.readTeamNames("src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles/listOfTeamNames.txt");
+        Label[] labels = {team1Label,team2Label, team3Label,team4Label,team5Label,team6Label,team7Label,team8Label};
+        int i = 0;
+        for (Label label: labels) {
+            label.setText(listOfNames.get(i));
+            i++;
+        }
     }
 
     @FXML

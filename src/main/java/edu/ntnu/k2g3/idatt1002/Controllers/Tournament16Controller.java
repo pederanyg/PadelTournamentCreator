@@ -1,11 +1,13 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileReader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.shape.Line;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 @SuppressWarnings("rawtypes")
@@ -59,7 +61,8 @@ public class Tournament16Controller {
     public Label winnerSem1;
     public Label winnerSemi2;
 
-    public Label team1, team2,team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15, team16;
+    public Label team1, team2,team3, team4, team5, team6, team7, team8;
+    public Label team9, team10, team11, team12, team13, team14, team15, team16;
     public Line line1winner1;
     public Line line1winner3;
     public Line line1winner7;
@@ -104,6 +107,17 @@ public class Tournament16Controller {
         , spinnerRoundOf16nr6, spinnerRoundOf16nr7, spinnerRoundOf16nr8, spinnerQuarter1,spinnerQuarter2, spinnerQuarter3, spinnerQuarter4,
                 winnerBracket1Spinner1, winnerBracket2Spinner)) {
             spinner.setVisible(false);
+        }
+    }
+
+    @FXML
+    public void displayTeamNames() {
+        ArrayList<String> listOfNames = PadelFileReader.readTeamNames("src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles/listOfTeamNames.txt");
+        Label[] labels = {team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11, team12, team13, team14, team15, team16};
+        int i = 0;
+        for (Label label: labels) {
+            label.setText(listOfNames.get(i));
+            i++;
         }
     }
     public void setWinnerRound16nr1() {
