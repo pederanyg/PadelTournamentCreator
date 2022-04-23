@@ -23,6 +23,8 @@ public class Match {
         return result;
     }
 
+    public Team getWinner(){return winner;}
+
     public void setResult(int one, int two, Team winner){
         this.winner = winner;
         this.result = one + "-" + two;
