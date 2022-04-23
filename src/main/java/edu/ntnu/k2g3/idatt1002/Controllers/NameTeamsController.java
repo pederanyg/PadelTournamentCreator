@@ -1,5 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileWriter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,7 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 
 public class NameTeamsController{
 
@@ -66,31 +68,22 @@ public class NameTeamsController{
 
     @FXML
     public void goToTournament(ActionEvent event) throws IOException {
-        Parent root;
         URL url;
-        FXMLLoader loader;
+        ArrayList<String> listOfTeamNames = new ArrayList<>(listOfTeams.getItems());
+        PadelFileWriter.writeTeamNamesToFile("src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles/listOfTeamNames.txt", listOfTeamNames);
 
         switch (listOfTeams.getItems().size()) {
-            case 4 -> {
-                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament.fxml").toURI().toURL();
-                loader = new FXMLLoader(url);
-                root = loader.load();
-                TournamentController nameTeamsController = loader.getController();
-                nameTeamsController.displayTeamNames(listOfTeams.getItems());
-            }
-            case 8 -> {
-                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament8.fxml").toURI().toURL();
-                loader = new FXMLLoader(url);
-                root = loader.load();
-            }
-            case 16 -> {
-                url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament16.fxml").toURI().toURL();
-                loader = new FXMLLoader(url);
-                root = loader.load();
-            }
+            case 4 -> url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament.fxml").toURI().toURL();
+
+            case 8 -> url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament8.fxml").toURI().toURL();
+
+            case 16 -> url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/tournament16.fxml").toURI().toURL();
+
             default -> throw new IllegalArgumentException("Number of teams are out of range.");
         }
 
+        FXMLLoader loader = new FXMLLoader(url);
+        Parent root = loader.load();
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
