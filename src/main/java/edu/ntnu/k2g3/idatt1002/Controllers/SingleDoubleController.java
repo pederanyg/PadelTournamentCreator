@@ -11,6 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.effect.Effect;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -20,9 +21,9 @@ import java.net.URL;
 
 public class SingleDoubleController {
     @FXML
-    public AnchorPane singelsDoublesPane;
+    public AnchorPane singlesDoublesPane, namePane;
+    @FXML
     public TextField tournamentName;
-    public Button confirmName;
     @FXML
     private RadioButton singlesButton, doublesButton;
     @FXML
@@ -36,7 +37,7 @@ public class SingleDoubleController {
         singlesButton.setToggleGroup(group);
         doublesButton.setToggleGroup(group);
         confirm.setDisable(true);
-        singelsDoublesPane.setVisible(false);
+        singlesDoublesPane.setVisible(false);
     }
 
     @FXML
@@ -46,7 +47,8 @@ public class SingleDoubleController {
 
     public void createTournament() {
         this.tournament = new Tournament(tournamentName.getText());
-        singelsDoublesPane.setVisible(true);
+        namePane.setDisable(true);
+        singlesDoublesPane.setVisible(true);
     }
 
     public void goToNumberOfTeams(ActionEvent event) throws IOException {

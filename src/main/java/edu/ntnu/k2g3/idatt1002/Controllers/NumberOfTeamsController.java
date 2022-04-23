@@ -23,7 +23,7 @@ public class NumberOfTeamsController {
 
     @FXML
     public void initialize() {
-        choiceBox.getItems().setAll(2,4,8,16);
+        choiceBox.getItems().setAll(4,8,16);
         confirm.setDisable(true);
     }
 

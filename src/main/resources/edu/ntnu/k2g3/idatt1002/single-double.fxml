@@ -9,7 +9,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.SingleDoubleController">
     <children>
-      <AnchorPane fx:id="singelsDoublesPane" layoutX="20.0" layoutY="135.0" prefHeight="236.0" prefWidth="559.0">
+      <AnchorPane fx:id="singlesDoublesPane" layoutX="20.0" layoutY="135.0" prefHeight="236.0" prefWidth="559.0">
          <children>
               <Button fx:id="confirm" layoutX="221.0" layoutY="158.0" mnemonicParsing="false" onAction="#goToNumberOfTeams" text="Confirm">
                   <font>
@@ -33,12 +33,16 @@
             </RadioButton>
          </children>
       </AnchorPane>
-      <Label layoutX="75.0" layoutY="14.0" text="Please enter the name of your tournament">
-         <font>
-            <Font size="24.0" />
-         </font>
-      </Label>
-      <TextField fx:id="tournamentName" layoutX="149.0" layoutY="84.0" promptText="tournament name..." />
-      <Button fx:id="confirmName" onAction="#createTournament" layoutX="343.0" layoutY="84.0" mnemonicParsing="false" text="Confirm" />
+      <AnchorPane fx:id="namePane" layoutX="59.0" layoutY="10.0" prefHeight="130.0" prefWidth="459.0">
+         <children>
+            <Button fx:id="confirmName" layoutX="285.0" layoutY="78.0" mnemonicParsing="false" onAction="#createTournament" text="Confirm" />
+            <Label layoutX="21.0" layoutY="12.0" text="Please enter the name of your tournament">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tournamentName" layoutX="90.0" layoutY="78.0" promptText="Tournament name..." />
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>

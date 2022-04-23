@@ -15,6 +15,7 @@ buildNumber.properties
 # Compiled class file
 *.class
 
+
 # Log file
 *.log
 
@@ -53,7 +54,7 @@ cmake-build-*/
 # IntelliJ
 out/
 
-
+src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles
 # JIRA plugin
 atlassian-ide-plugin.xml
 
