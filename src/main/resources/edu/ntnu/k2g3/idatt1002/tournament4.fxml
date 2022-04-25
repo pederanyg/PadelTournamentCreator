@@ -49,15 +49,20 @@
         <Label fx:id="team3Label" alignment="CENTER" layoutX="560.0" layoutY="40.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 3" />
         <Spinner fx:id="spinnerTeam4" layoutX="561.0" layoutY="274.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
         <Spinner fx:id="spinnerTeam3" layoutX="561.0" layoutY="14.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
-        <Button fx:id="exitTournament" layoutX="269.0" layoutY="425.0" mnemonicParsing="false" onAction="#returnToFirstScene" text="Go to home screen">
+        <Button fx:id="exitTournament" layoutX="186.0" layoutY="421.0" mnemonicParsing="false" onAction="#returnToFirstScene" text="Go to home screen">
             <font>
                 <Font size="14.0" />
             </font>
         </Button>
-        <Label fx:id="winnerDisplay" layoutX="219.0" layoutY="366.0" text="Winner displayed here">
+        <Label fx:id="winnerDisplay" layoutX="219.0" layoutY="366.0" text="Winner displayed here" textAlignment="CENTER">
             <font>
                 <Font size="24.0" />
             </font>
         </Label>
+      <Button fx:id="saveResult" layoutX="339.0" layoutY="421.0" mnemonicParsing="false" onAction="#saveTournamentToFile" prefHeight="27.0" prefWidth="130.0" text="Save results">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

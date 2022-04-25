@@ -9,7 +9,7 @@ package edu.ntnu.k2g3.idatt1002;
  */
 public class Team {
 
-    private String teamName;
+    private final String teamName;
     private Player player1, player2;
 
 

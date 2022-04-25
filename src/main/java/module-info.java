@@ -6,6 +6,7 @@ module edu.ntnu.k2g3.idatt1002.Controllers {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens edu.ntnu.k2g3.idatt1002 to javafx.fxml;
     exports edu.ntnu.k2g3.idatt1002;

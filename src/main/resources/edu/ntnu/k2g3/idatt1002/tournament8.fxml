@@ -108,16 +108,21 @@
       
               <Line fx:id="winnerLine" endX="-48.000030517578125" endY="-168.59999084472656" layoutX="146.0" layoutY="250.0" startX="-47.999969482421875" startY="-61.19999694824219" />
               <Line fx:id="finalist1Line" endX="80.0" endY="-57.800018310546875" layoutX="100.0" layoutY="246.0" startX="-79.0" startY="-57.800018310546875" />
-              <Label fx:id="winnerDisplay" layoutX="-13.0" layoutY="359.0" text="Winner displayed here">
+              <Label fx:id="winnerDisplay" layoutX="-4.0" layoutY="359.0" text="Winner displayed here">
                   <font>
                       <Font size="24.0" />
                   </font>
               </Label>
-              <Button fx:id="exitTournament" layoutX="32.0" layoutY="408.0" mnemonicParsing="false" onAction="#returnToFirstScene" text="Go to home screen">
+              <Button fx:id="exitTournament" layoutX="-31.0" layoutY="434.0" mnemonicParsing="false" onAction="#returnToFirstScene" text="Go to home screen">
                   <font>
                       <Font size="14.0" />
                   </font>
               </Button>
+            <Button fx:id="saveResult" layoutX="116.0" layoutY="434.0" mnemonicParsing="false" onAction="#saveTournamentToFile" prefHeight="27.0" prefWidth="130.0" text="Save results">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
     </children>

@@ -2,7 +2,9 @@ package edu.ntnu.k2g3.idatt1002.FileHandling;
 
 import edu.ntnu.k2g3.idatt1002.*;
 
+import java.awt.*;
 import java.io.*;
+import java.net.URI;
 import java.util.ArrayList;
 
 public class PadelFileWriter {
@@ -17,15 +19,12 @@ public class PadelFileWriter {
         }
     }
 
-    public static void writeDoubleTournamentToFile(String path, Tournament tournament) {
-        if (path.isBlank()) {
-            throw new IllegalArgumentException("Path must be specified.");
-        }
+    public static void writeDoubleTournamentToFile(Tournament tournament) {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
         }
+        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".csv");
 
-        File file = new File(path);
         try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter writer = new BufferedWriter(fileWriter);
              PrintWriter printer = new PrintWriter(writer)) {

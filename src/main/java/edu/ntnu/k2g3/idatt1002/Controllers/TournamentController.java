@@ -1,5 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileWriter;
 import edu.ntnu.k2g3.idatt1002.Match;
 import edu.ntnu.k2g3.idatt1002.Tournament;
 import javafx.event.ActionEvent;
@@ -77,5 +78,11 @@ public abstract class TournamentController {
         }
     }
 
+    public void saveTournamentToFile(){
+        PadelFileWriter.checkDirectory();
+        if (tournament.isDoubles()){
+            PadelFileWriter.writeDoubleTournamentToFile(tournament);
+        }else PadelFileWriter.writeSingleTournamentToFile(tournament);
+    }
 
 }
