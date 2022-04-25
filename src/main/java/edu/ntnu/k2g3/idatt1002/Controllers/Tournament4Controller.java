@@ -1,30 +1,18 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
-import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileReader;
-import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileWriter;
 import edu.ntnu.k2g3.idatt1002.Match;
 import edu.ntnu.k2g3.idatt1002.Tournament;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Line;
-import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-public class TournamentController {
+public class Tournament4Controller {
     @FXML
     private Spinner<Integer> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
     @FXML
@@ -52,14 +40,18 @@ public class TournamentController {
     }
 
     public void winnerSemi1() {
-        if((setNextBracket(spinnerTeam1, spinnerTeam2, winnerBracket1, team1Label) ||
-                setNextBracket(spinnerTeam2, spinnerTeam1, winnerBracket1, team2Label)) &&
-               (setNextBracket(spinnerTeam3, spinnerTeam4, winnerBracket2, team3Label) ||
-                setNextBracket(spinnerTeam4, spinnerTeam3, winnerBracket2, team4Label))){
+        if(checkAllBrackets()){
             tournament.createNewMatches();
             leftAnchor.setDisable(false);
             rightAnchor.setDisable(false);
             finalAnchor.setVisible(true);}
+    }
+
+    private boolean checkAllBrackets(){
+       return (setNextBracket(spinnerTeam1, spinnerTeam2, winnerBracket1, team1Label) ||
+                setNextBracket(spinnerTeam2, spinnerTeam1, winnerBracket1, team2Label)) &&
+                (setNextBracket(spinnerTeam3, spinnerTeam4, winnerBracket2, team3Label) ||
+                        setNextBracket(spinnerTeam4, spinnerTeam3, winnerBracket2, team4Label));
     }
 
     private boolean setNextBracket(Spinner<Integer> spinner1, Spinner<Integer> spinner2, Label winnerBracket, Label teamLabel) {
@@ -68,13 +60,14 @@ public class TournamentController {
                        if (match.getTeam1().getTeamName().equals(teamLabel.getText())){
                            match.setResult(spinner1.getValue(), spinner2.getValue(), match.getTeam1());
                        }else if (match.getTeam2().getTeamName().equals(teamLabel.getText())){
-                           match.setResult(spinner2.getValue(), spinner1.getValue(), match.getTeam1());
+                           match.setResult(spinner2.getValue(), spinner1.getValue(), match.getTeam2());
             }});
             spinner1.setDisable(true);
             spinner2.setDisable(true);
             winnerBracket.setText(teamLabel.getText());
             return true;
-        }else {return false;}
+        }else {
+            return false;}
     }
 
     @FXML
@@ -92,7 +85,6 @@ public class TournamentController {
         winnerDisplay.setVisible(true);
         winnerDisplay.setText(winnerFinal.getText() + " is the winning team!");
         exitTournament.setVisible(true);
-        tournament.getMatches().forEach(System.out::println);
     }
 
     public void setTournament(Tournament tournament){
@@ -117,14 +109,7 @@ public class TournamentController {
     }
 
     public void switchToScene1(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/welcomescreen.fxml").toURI().toURL();
-        FXMLLoader loader = new FXMLLoader(url);
-        Parent root = loader.load();
-
-        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        Tournament8Controller.returnToFirstScene(event);
 
     }
 }
