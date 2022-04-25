@@ -1,0 +1,16 @@
+.button {
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: #d3d3d3;
+    -fx-cursor: hand;
+}
+
+.text-field {
+
+}

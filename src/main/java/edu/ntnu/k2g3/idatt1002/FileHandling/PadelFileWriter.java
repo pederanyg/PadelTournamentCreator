@@ -17,7 +17,7 @@ public class PadelFileWriter {
         }
     }
 
-    public static void writeTournamentToFile(String path, Tournament tournament) {
+    public static void writeDoubleTournamentToFile(String path, Tournament tournament) {
         if (path.isBlank()) {
             throw new IllegalArgumentException("Path must be specified.");
         }
@@ -32,14 +32,46 @@ public class PadelFileWriter {
 
             printer.println("Tournament name: " + tournament.getName());
             ArrayList<Team> allTeams = tournament.getTeams();
+            printer.print('\n');
 
             for (int i = 0; i < allTeams.size(); i++){
-                printer.print("Team " + i + ": " + allTeams.get(i).getTeamName() + ". Players: ");
+                printer.print("Team " + (i + 1) + ": " + allTeams.get(i).getTeamName() + ". Players: ");
                 printer.println(allTeams.get(i).getPlayer1() + ", " + allTeams.get(i).getPlayer2());
             }
+            printer.print('\n');
 
             for (Match match : tournament.getMatches()) {
-                printer.print(match.toString());
+                printer.print(match.toString() + '\n');
+            }
+        }catch(IOException e){
+            e.printStackTrace();
+        }
+    }
+
+    public static void writeSingleTournamentToFile(String path, Tournament tournament) {
+        if (path.isBlank()) {
+            throw new IllegalArgumentException("Path must be specified.");
+        }
+        if (tournament.getMatches().isEmpty()) {
+            throw new IllegalArgumentException("The registry is empty.");
+        }
+
+        File file = new File(path);
+        try (FileWriter fileWriter = new FileWriter(file);
+             BufferedWriter writer = new BufferedWriter(fileWriter);
+             PrintWriter printer = new PrintWriter(writer)) {
+
+            printer.println("Tournament name: " + tournament.getName());
+            ArrayList<Team> allTeams = tournament.getTeams();
+            printer.print('\n');
+
+            for (int i = 0; i < allTeams.size(); i++){
+                printer.println("Team " + (i + 1) + ": " + allTeams.get(i).getTeamName());
+            }
+            printer.print('\n');
+
+            for (Match match : tournament.getMatches()) {
+                printer.print(match.toString() + '\n');
             }
         }catch(IOException e){
             e.printStackTrace();
