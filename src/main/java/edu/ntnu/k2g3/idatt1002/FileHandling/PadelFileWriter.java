@@ -1,9 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.FileHandling;
 
-import edu.ntnu.k2g3.idatt1002.Player;
-import edu.ntnu.k2g3.idatt1002.PlayerRegistry;
-import edu.ntnu.k2g3.idatt1002.Team;
-import edu.ntnu.k2g3.idatt1002.TeamRegistry;
+import edu.ntnu.k2g3.idatt1002.*;
 
 import java.io.*;
 import java.util.ArrayList;
