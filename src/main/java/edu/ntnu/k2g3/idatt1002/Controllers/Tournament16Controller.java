@@ -7,13 +7,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.shape.Line;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 
-@SuppressWarnings("rawtypes")
-public class Tournament16Controller {
+public class Tournament16Controller extends TournamentController {
     @FXML
     public Spinner spinnerRoundOf16nr2;
     public Spinner spinnerRoundOf16nr6;
@@ -64,41 +60,13 @@ public class Tournament16Controller {
     public Label winnerSemi2;
     public Label team1, team2,team3, team4, team5, team6, team7, team8;
     public Label team9, team10, team11, team12, team13, team14, team15, team16;
+    public Button exitTournament, saveResult;
     @FXML
-    public Line line1winner1;
-    public Line line1winner3;
-    public Line line1winner7;
-    public Line line1winner6;
-    public Line line2winner3;
-    public Line line2winner1;
-    public Line line2winner7;
-    public Line line1winner2;
-    public Line finalWinnerLine2;
-    public Line line2winner6;
-    public Line line1winner4;
-    public Line line2winner4;
-    public Line line2winner5;
-    public Line line1winner5;
-    public Line line1winner9;
-    public Line line2winner9;
-    public Line line1winner10;
-    public Line line2winner10;
-    public Line line2winner2;
-    public Line line1winner8;
-    public Line line2winner8;
-    public Line line1winner11;
-    public Line line2winner11;
-    public Line finalWinnerLine1;
-    public Line line1winner12;
-    public Line line2winner12;
-    public Button exitTournament;
-
-
-    private Tournament tournament;
-
-    public void setTournament(Tournament tournament){
-        this.tournament = tournament;
-    }
+    private AnchorPane leftAnchor, leftQuarterAnchor;
+    @FXML
+    private AnchorPane rightAnchor, rightQuarterAnchor;
+    @FXML
+    private AnchorPane semiRightAnchor, semiLeftAnchor, finalAnchor, winnerAnchor;
 
     public void initialize() {
         exitTournament.setVisible(false);
@@ -128,6 +96,7 @@ public class Tournament16Controller {
             i++;
         }
     }
+
 
     private boolean setNextBracket(Spinner<Integer> spinner1, Spinner<Integer> spinner2, Label winnerBracket, Label teamLabel) {
         if (spinner1.getValue().equals(6)){
