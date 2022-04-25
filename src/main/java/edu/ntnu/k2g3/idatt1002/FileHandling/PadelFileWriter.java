@@ -47,15 +47,12 @@ public class PadelFileWriter {
         }
     }
 
-    public static void writeSingleTournamentToFile(String path, Tournament tournament) {
-        if (path.isBlank()) {
-            throw new IllegalArgumentException("Path must be specified.");
-        }
+    public static void writeSingleTournamentToFile(Tournament tournament) {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
         }
+        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".csv");
 
-        File file = new File(path);
         try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter writer = new BufferedWriter(fileWriter);
              PrintWriter printer = new PrintWriter(writer)) {
