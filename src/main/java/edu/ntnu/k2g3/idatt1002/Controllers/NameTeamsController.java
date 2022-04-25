@@ -15,11 +15,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-import java.io.File;
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class NameTeamsController{
 
@@ -165,9 +162,9 @@ public class NameTeamsController{
 
         switch (listOfTeams.getItems().size()) {
             case 4 -> {
-                loader = new FXMLLoader(getClass().getResource("/edu/ntnu/k2g3/idatt1002/tournament.fxml"));
+                loader = new FXMLLoader(getClass().getResource("/edu/ntnu/k2g3/idatt1002/tournament4.fxml"));
                 root = loader.load();
-                TournamentController controller = loader.getController();
+                Tournament4Controller controller = loader.getController();
                 controller.setTournament(this.tournament);
             }
             case 8 -> {

@@ -3,9 +3,9 @@ package edu.ntnu.k2g3.idatt1002;
 import java.util.*;
 
 public class Tournament {
-    private ArrayList<Team> teams;
+    private final ArrayList<Team> teams;
     private final String name;
-    private ArrayList<Match> matches;
+    private final ArrayList<Match> matches;
     private boolean isDoubles;
 
 
@@ -14,12 +14,6 @@ public class Tournament {
         this.matches = new ArrayList<>();
         this.name = name;
     }
-
-    /*public Tournament(ArrayList<Team> teams, String name, ArrayList<Match> matches) {
-        this.teams = teams;
-        this.name = name;
-        this.matches = matches;
-    }*/
 
     public String getName(){
         return name;
@@ -69,7 +63,7 @@ public class Tournament {
                         createMatches(new ArrayList<>(matches.stream().map(Match::getWinner).toList()));
                     }
                     else if (matches.size() == 6){
-                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(-1), matches.get(-2)));
+                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(matches.size()-1), matches.get(matches.size()-2)));
                         createMatches(new ArrayList<>(match.stream().map(Match::getWinner).toList()));
                     }
                     break;
@@ -78,10 +72,10 @@ public class Tournament {
                         createMatches(new ArrayList<>(matches.stream().map(Match::getWinner).toList()));
                     }
                     else if (matches.size() == 12){
-                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(-1),matches.get(-2), matches.get(-3), matches.get(-4)));
+                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(matches.size()-1),matches.get(matches.size()-2), matches.get(matches.size()-3), matches.get(matches.size()-4)));
                         createMatches(new ArrayList<>(match.stream().map(Match::getWinner).toList()));
                     }else if (matches.size() == 14){
-                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(-1), matches.get(-2)));
+                        ArrayList<Match> match = new ArrayList<>(Arrays.asList(matches.get(matches.size()-1), matches.get(matches.size()-2)));
                         createMatches(new ArrayList<>(match.stream().map(Match::getWinner).toList()));
                     }
                     break;}
