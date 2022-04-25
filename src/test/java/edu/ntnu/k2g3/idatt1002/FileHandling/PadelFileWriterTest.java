@@ -13,13 +13,14 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PadelFileWriterTest {
 
     @Test
-    public void writePlayerRegistryToFile() {
-        PadelFileWriter.writePlayerRegistryToFile("src/test/resources/test.csv", createPlayerRegistry());
-    }
+    public void writeTournamentToFile() {
+        Tournament tournament = new Tournament("Test tournament");
+        tournament.addAll(createTeamRegistry());
+        tournament.createNewMatches();
 
-    @Test
-    public void writeTeamRegistryToFile() {
-        PadelFileWriter.writeTeamRegistryToFile("src/test/resources/testTeam.csv", createTeamRegistry());
+        PadelFileWriter.checkDirectory();
+        PadelFileWriter.writeTournamentToFile("src/test/resources/testTeamNames.csv", tournament);
+
     }
 
     @Test
