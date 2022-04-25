@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.NameTeamsController">
+   <children>
+      <ChoiceBox fx:id="choiceBox" layoutX="80.0" layoutY="165.0" onAction="#chosenTeam" prefWidth="150.0" />
+      <Label fx:id="teamNameLabel" layoutX="105.0" layoutY="241.0" text="Enter player name:" />
+      <TextField fx:id="playerNameField" layoutX="76.0" layoutY="284.0" promptText="Player name..." />
+      <Button fx:id="addButton" layoutX="118.0" layoutY="344.0" mnemonicParsing="false" prefWidth="76.0" text="Add player" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="416.0" layoutX="2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="600.0" />
+      <ListView fx:id="listOfTeams" editable="false" layoutX="349.0" layoutY="5.0" prefHeight="390.0" prefWidth="243.0" />
+      <Button fx:id="startButton" layoutX="77.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToTournament" text="Start tournament!">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="teamChooser" layoutX="13.0" layoutY="68.0" prefHeight="61.0" prefWidth="300.0" text="Choose a player from the &#10;dropdown menu:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="doublesAnchor" layoutX="13.0" layoutY="264.0" prefHeight="80.0" prefWidth="300.0" visible="false">
+         <children>
+            <TextField fx:id="playerOne" layoutX="14.0" layoutY="40.0" prefHeight="26.0" prefWidth="125.0" promptText="Player one" />
+            <TextField fx:id="playerTwo" layoutX="150.0" layoutY="40.0" prefHeight="26.0" prefWidth="125.0" promptText="Player two" />
+            <TextField fx:id="teamNameField" layoutX="88.0" layoutY="7.0" prefHeight="26.0" prefWidth="125.0" promptText="Team name" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="numberOfTeamsAnchor" layoutX="3.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcf9f9" height="416.0" layoutX="-13.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="621.0" />
+            <Label layoutX="74.0" layoutY="14.0" text="Choose the amount of teams playing in your tournament">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="numberOfTeamsChoiceBox" layoutX="224.0" layoutY="159.0" onAction="#teamsSelected" prefWidth="150.0" />
+            <Button fx:id="confirm" layoutX="212.0" layoutY="259.0" mnemonicParsing="false" text="Confirm">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
