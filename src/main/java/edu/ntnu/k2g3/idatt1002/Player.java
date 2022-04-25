@@ -2,30 +2,27 @@ package edu.ntnu.k2g3.idatt1002;
 
 public class Player {
 
-    private String firstname;
-    private String surname;
+    private final String firstName;
+    private final String surName;
 
-    public Player(String firstName, String lastName){
-        if (firstName.isBlank()||lastName.isBlank()){throw new IllegalArgumentException("The player needs a full name!");}
-        this.firstname = firstName.trim();
-        this.surname = lastName.trim();
+    public Player(String firstName, String surName){
+        if (firstName.isBlank()||surName.isBlank()){throw new IllegalArgumentException("The player needs a full name!");}
+        this.firstName = firstName.trim();
+        this.surName = surName.trim();
     }
 
+
     public String getFirstName() {
-        return firstname;
+        return firstName;
     }
 
     public String getSurName() {
-        return surname;
+        return surName;
     }
 
     public String getName() {
-        return firstname + " " + surname;
+        return firstName + " " + surName;
     }
 
-    public void setName(String firstName, String lastName) {
-        if (firstName.isBlank()||lastName.isBlank()){throw new IllegalArgumentException("The player needs a full name!");}
-        this.firstname = firstName;
-        this.surname = lastName;
-    }
 }
+
