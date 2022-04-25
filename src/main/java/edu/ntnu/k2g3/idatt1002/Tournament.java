@@ -6,32 +6,43 @@ public class Tournament {
     private ArrayList<Team> teams;
     private final String name;
     private ArrayList<Match> matches;
-    private boolean singlesOrDoubles;
+    private boolean isDoubles;
+
 
     public Tournament(String name){
+        this.teams = new ArrayList<>();
+        this.matches = new ArrayList<>();
         this.name = name;
     }
 
-    public Tournament(ArrayList<Team> teams, String name, ArrayList<Match> matches) {
+    /*public Tournament(ArrayList<Team> teams, String name, ArrayList<Match> matches) {
         this.teams = teams;
         this.name = name;
         this.matches = matches;
-    }
-
-    public boolean isSinglesOrDoubles(){
-        return singlesOrDoubles;
-    }
+    }*/
 
     public String getName(){
         return name;
     }
 
-    public void setSinglesOrDoubles(boolean doubles){
-        this.singlesOrDoubles = doubles;
+    public boolean isDoubles(){
+        return isDoubles;
+    }
+
+    public void setDoubles(boolean doubles){
+        this.isDoubles = doubles;
     }
 
     public void addTeam(Team team){
         teams.add(team);
+    }
+
+    public ArrayList<Team> getTeams() {
+        return teams;
+    }
+
+    public ArrayList<Match> getMatches(){
+        return matches;
     }
 
     public void addAll(ArrayList<Team> teamsToAdd){
@@ -39,7 +50,6 @@ public class Tournament {
     }
 
     private void createMatches(ArrayList<Team> teams){
-        Collections.shuffle(teams);
         for (int i = 0; i<(teams.size()); i+=2){
             matches.add(new Match(teams.get(i), teams.get(i+1)));
        }
@@ -47,6 +57,7 @@ public class Tournament {
 
     public void createNewMatches(){
         if (matches.isEmpty()){
+            Collections.shuffle(teams);
             createMatches(teams);
         }else{
             switch (teams.size()){
