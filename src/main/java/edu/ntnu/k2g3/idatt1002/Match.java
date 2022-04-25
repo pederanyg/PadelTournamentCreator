@@ -32,7 +32,7 @@ public class Match {
 
     @Override
     public String toString() {
-        return "Match between " + team1.getTeamName() + "and" + team2.getTeamName() +
+        return "Match between " + team1.getTeamName() + " and " + team2.getTeamName() +
                 '\n' + "Result: " + result;
     }
 }

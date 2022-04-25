@@ -24,5 +24,10 @@ public class Player {
         return firstName + " " + surName;
     }
 
+    @Override
+    public String toString() {
+        return firstName + " " + surName;
+    }
+
 }
 

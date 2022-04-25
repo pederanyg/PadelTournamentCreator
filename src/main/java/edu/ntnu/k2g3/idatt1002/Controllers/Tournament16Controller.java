@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
 import java.util.ArrayList;
@@ -44,7 +45,7 @@ public class Tournament16Controller {
     public Spinner spinnerTeam16;
     public Spinner spinnerTeam15;
     public Spinner spinnerTeam1;
-
+    @FXML
     public Label winnerRound16nr6;
     public Label winnerRound16nr5;
     public Label winnerRound16nr2;
@@ -61,9 +62,9 @@ public class Tournament16Controller {
     public Label winnerQuarter4;
     public Label winnerSem1;
     public Label winnerSemi2;
-
     public Label team1, team2,team3, team4, team5, team6, team7, team8;
     public Label team9, team10, team11, team12, team13, team14, team15, team16;
+    @FXML
     public Line line1winner1;
     public Line line1winner3;
     public Line line1winner7;
@@ -127,7 +128,21 @@ public class Tournament16Controller {
             i++;
         }
     }
+
+    private boolean setNextBracket(Spinner<Integer> spinner1, Spinner<Integer> spinner2, Label winnerBracket, Label teamLabel) {
+        if (spinner1.getValue().equals(6)){
+            spinner1.setDisable(true);
+            spinner2.setDisable(true);
+            winnerBracket.setText(teamLabel.getText());
+            return true;
+        }else return false;
+    }
+
+
     public void setWinnerRound16nr1() {
+
+
+        /*
         if (spinnerTeam1.getValue().equals(6)) {
             spinnerTeam2.setDisable(true);
             spinnerTeam1.setDisable(true);
@@ -146,7 +161,7 @@ public class Tournament16Controller {
             winnerRound16nr1.setText(team2.getText());
             winnerRound16nr1.setVisible(true);
             winnerQuarter1.setVisible(true);
-        }
+        } */
     }
     public void setWinnerRound16nr2() {
         if (spinnerTeam3.getValue().equals(6)) {

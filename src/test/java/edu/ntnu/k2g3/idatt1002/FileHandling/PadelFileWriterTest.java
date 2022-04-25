@@ -25,15 +25,6 @@ public class PadelFileWriterTest {
         PadelFileWriter.writeTeamNamesToFile("src/test/resources/testTeamNames.csv", createListOfTeams());
     }
 
-    private PlayerRegistry createPlayerRegistry(){
-        PlayerRegistry registry = new PlayerRegistry();
-        registry.addNewPlayer("anna", "tvedt");
-        registry.addNewPlayer("marie", "tvedt");
-        registry.addNewPlayer("jens", "tvedt");
-        registry.addNewPlayer("william", "tvedt");
-        registry.addNewPlayer("helle", "tvedt");
-        return registry;
-    }
 
     private ArrayList<Team> createTeamRegistry(){
         ArrayList<Team> registry = new ArrayList<Team>();
