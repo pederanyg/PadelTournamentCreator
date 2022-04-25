@@ -139,7 +139,6 @@ public class NameTeamsController{
         if (tournament.isDoubles()){
             teamChooser.setText("All teams have been added.");
         }
-        System.out.println(tournament.getFirtsMatch());
     }
 
     private Team createTeam()throws IllegalArgumentException{

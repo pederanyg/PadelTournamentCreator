@@ -1,23 +1,25 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
 import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileReader;
+import edu.ntnu.k2g3.idatt1002.Tournament;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Line;
 
 import java.util.ArrayList;
 
 public class Tournament8Controller {
     @FXML
-    private Spinner<String> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
+    private Spinner<Integer> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
     @FXML
-    private Spinner<String> spinnerTeam5, spinnerTeam6, spinnerTeam7, spinnerTeam8;
+    private Spinner<Integer> spinnerTeam5, spinnerTeam6, spinnerTeam7, spinnerTeam8;
     @FXML
-    private Spinner<String> bracket1Spinner, bracket2Spinner, bracket3Spinner, bracket4Spinner;
+    private Spinner<Integer> bracket1Spinner, bracket2Spinner, bracket3Spinner, bracket4Spinner;
     @FXML
-    private Spinner<String> finalist1Spinner, finalist2Spinner;
+    private Spinner<Integer> finalist1Spinner, finalist2Spinner;
 
     @FXML
     private Label team1Label, team2Label, team3Label, team4Label;
@@ -44,37 +46,29 @@ public class Tournament8Controller {
     private Line winnerLine;
 
     @FXML
+    private AnchorPane anchorLeftUpperCorner, anchorRightUpperCorner, anchorLeftLowerCorner, anchorRightLowerCorner;
+    @FXML
+    private AnchorPane firstRightAnchor, firstLeftAnchor, anchorFinalLeft, anchorFinalRight, finalAnchor;
+
+    @FXML
     private Button exitTournament;
+
+    private Tournament tournament;
+
+    public void setTournament(Tournament tournament){
+        this.tournament = tournament;
+    }
 
     @FXML
     public void initialize() {
         displayTeamNames();
-        finalist1Line.setVisible(false);
-        finalist2Line.setVisible(false);
-        winnerBracket1.setText("");
-        winnerBracket2.setText("");
-        winnerBracket3.setText("");
-        winnerBracket4.setText("");
-        winnerFinal.setVisible(false);
-        bracket1Spinner.setVisible(false);
-        bracket2Spinner.setVisible(false);
-        bracket3Spinner.setVisible(false);
-        bracket4Spinner.setVisible(false);
-        finalist1Spinner.setVisible(false);
-        finalist2Spinner.setVisible(false);
-        line1Bracket1.setVisible(false);
-        line2Bracket1.setVisible(false);
-        line1Bracket2.setVisible(false);
-        line2Bracket2.setVisible(false);
-        line1Bracket3.setVisible(false);
-        line2Bracket3.setVisible(false);
-        line1Bracket4.setVisible(false);
-        line2Bracket4.setVisible(false);
-        winnerDisplay.setVisible(false);
-        exitTournament.setVisible(false);
-        finalist1.setVisible(false);
-        finalist2.setVisible(false);
-        winnerLine.setVisible(false);
+        anchorLeftLowerCorner.setVisible(false);
+        anchorRightLowerCorner.setVisible(false);
+        anchorLeftUpperCorner.setVisible(false);
+        anchorRightUpperCorner.setVisible(false);
+        anchorFinalLeft.setVisible(false);
+        anchorFinalRight.setVisible(false);
+        finalAnchor.setVisible(false);
     }
 
     @FXML
@@ -88,9 +82,22 @@ public class Tournament8Controller {
         }
     }
 
+    private boolean setNextMatch(Spinner<Integer> spinner, Label winner, Label nextBracket){
+        if (spinner.getValue() >= 6){
+            nextBracket.setText(winner.getText());
+            return true;
+        }else{return false;}
+    }
+
     @FXML
     public void decideWinnerBracket1() {
+        if (setNextMatch(spinnerTeam1, team1Label, winnerBracket1) || setNextMatch(spinnerTeam2, team2Label, winnerBracket1)){
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }/*
         if(spinnerTeam1.getValue().equals(6)) {
+
             winnerBracket1.setText(team1Label.getText());
             winnerBracket1.setVisible(true);
             spinnerTeam1.setDisable(true);
@@ -101,13 +108,18 @@ public class Tournament8Controller {
             winnerBracket1.setVisible(true);
             spinnerTeam1.setDisable(true);
             spinnerTeam2.setDisable(true);
-            bracket1Spinner.setVisible(true);
-        }
+            bracket1Spinner.setVisible(true);*/
+
     }
 
     @FXML
     public void decideWinnerBracket2() {
-        if(spinnerTeam3.getValue().equals(6)) {
+        if (setNextMatch(spinnerTeam3, team3Label, winnerBracket2) || setNextMatch(spinnerTeam4, team4Label, winnerBracket2)) {
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }
+        /*if(spinnerTeam3.getValue().equals(6)) {
             winnerBracket2.setText(team3Label.getText());
             winnerBracket2.setVisible(true);
             spinnerTeam4.setDisable(true);
@@ -118,13 +130,19 @@ public class Tournament8Controller {
             winnerBracket2.setVisible(true);
             spinnerTeam4.setDisable(true);
             spinnerTeam3.setDisable(true);
-            bracket2Spinner.setVisible(true);
-        }
+            bracket2Spinner.setVisible(true);*/
+
     }
 
     @FXML
     public void decideWinnerBracket3() {
-        if(spinnerTeam5.getValue().equals(6)) {
+
+        if (setNextMatch(spinnerTeam5, team5Label, winnerBracket3) || setNextMatch(spinnerTeam7, team7Label, winnerBracket3)) {
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }
+        /*if(spinnerTeam5.getValue().equals(6)) {
             winnerBracket3.setText(team5Label.getText());
             winnerBracket3.setVisible(true);
             spinnerTeam7.setDisable(true);
@@ -136,12 +154,17 @@ public class Tournament8Controller {
             spinnerTeam7.setDisable(true);
             spinnerTeam5.setDisable(true);
             bracket3Spinner.setVisible(true);
-        }
+        }*/
     }
 
     @FXML
     public void decideWinnerBracket4() {
-        if(spinnerTeam6.getValue().equals(6)) {
+        if (setNextMatch(spinnerTeam6, team6Label, winnerBracket4) || setNextMatch(spinnerTeam8, team8Label, winnerBracket4)) {
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }
+        /*if(spinnerTeam6.getValue().equals(6)) {
             winnerBracket4.setText(team7Label.getText());
             winnerBracket4.setVisible(true);
             spinnerTeam8.setDisable(true);
@@ -153,11 +176,16 @@ public class Tournament8Controller {
             spinnerTeam8.setDisable(true);
             spinnerTeam6.setDisable(true);
             bracket4Spinner.setVisible(true);
-        }
+        }*/
     }
 
     @FXML
     public void decideWinnerSemi1() {
+        if (setNextMatch(bracket1Spinner, winnerBracket1, finalist1) || setNextMatch(bracket3Spinner, winnerBracket3, finalist1)) {
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }/*
         if(bracket1Spinner.getValue().equals(6)) {
             finalist1.setText(winnerBracket1.getText());
             finalist1.setVisible(true);
@@ -174,11 +202,16 @@ public class Tournament8Controller {
             finalist1Spinner.setVisible(true);
             line1Bracket3.setVisible(true);
             line2Bracket3.setVisible(true);
-        }
+        }*/
     }
 
     @FXML
     public void decideWinnerSemi2() {
+        if (setNextMatch(bracket2Spinner, winnerBracket2, finalist2) || setNextMatch(bracket4Spinner, winnerBracket4, finalist2)) {
+            anchorLeftUpperCorner.setVisible(true);
+            spinnerTeam1.setDisable(true);
+            spinnerTeam2.setDisable(true);
+        }/*
         if(bracket2Spinner.getValue().equals(6)) {
             finalist2.setText(winnerBracket2.getText());
             finalist2.setVisible(true);
@@ -195,7 +228,7 @@ public class Tournament8Controller {
             finalist2Spinner.setVisible(true);
             line1Bracket4.setVisible(true);
             line2Bracket4.setVisible(true);
-        }
+        }*/
     }
 
     @FXML

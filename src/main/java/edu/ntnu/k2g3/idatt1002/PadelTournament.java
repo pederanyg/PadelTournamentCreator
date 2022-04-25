@@ -12,7 +12,7 @@ public class PadelTournament extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(PadelTournament.class.getResource("welcomescreen.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 700, 400);
-        stage.setTitle("PadelTournamentGenerator");
+        stage.setTitle("Padel TournamentGenerator");
         stage.setScene(scene);
         stage.show();
     }

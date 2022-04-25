@@ -21,12 +21,12 @@
                       <Font size="24.0" />
                   </font>
               </Label>
-            <RadioButton fx:id="doublesButton" layoutX="355.0" layoutY="102.0" mnemonicParsing="false" onAction="#enableOkButton" text="Doubles">
+            <RadioButton fx:id="doublesButton" layoutX="355.0" layoutY="102.0" mnemonicParsing="false" text="Doubles">
                <font>
                   <Font size="22.0" />
                </font>
             </RadioButton>
-            <RadioButton fx:id="singlesButton" layoutX="100.0" layoutY="102.0" mnemonicParsing="false" onAction="#enableOkButton" text="Singles">
+            <RadioButton fx:id="singlesButton" layoutX="100.0" layoutY="102.0" mnemonicParsing="false" text="Singles">
                <font>
                   <Font size="22.0" />
                </font>

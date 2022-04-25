@@ -1,6 +1,7 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
 import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileReader;
+import edu.ntnu.k2g3.idatt1002.Tournament;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -91,6 +92,12 @@ public class Tournament16Controller {
     public Line line2winner12;
     public Button exitTournament;
 
+
+    private Tournament tournament;
+
+    public void setTournament(Tournament tournament){
+        this.tournament = tournament;
+    }
 
     public void initialize() {
         exitTournament.setVisible(false);

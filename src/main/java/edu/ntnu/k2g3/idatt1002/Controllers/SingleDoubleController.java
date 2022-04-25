@@ -31,19 +31,26 @@ public class SingleDoubleController {
 
     private Tournament tournament;
 
-    @FXML
-    private void initialize() {
+    public void initialize() {
         ToggleGroup group = new ToggleGroup();
         singlesButton.setToggleGroup(group);
         doublesButton.setToggleGroup(group);
         confirm.setDisable(true);
         singlesDoublesPane.setVisible(false);
+
+        doublesButton.setOnAction((event) -> {
+            tournament.setDoubles(true);
+            confirm.setDisable(false);
+        }
+        );
+
+        singlesButton.setOnAction((event) -> {
+            tournament.setDoubles(false);
+            confirm.setDisable(false);
+        }
+        );
     }
 
-    @FXML
-    public void enableOkButton() {
-        confirm.setDisable(false);
-    }
 
     public void createTournament() {
         this.tournament = new Tournament(tournamentName.getText());
@@ -52,8 +59,13 @@ public class SingleDoubleController {
     }
 
     public void goToNumberOfTeams(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/numberOfTeams.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
+        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/nameTeam.fxml").toURI().toURL();
+        FXMLLoader loader = new FXMLLoader(url);
+        Parent root = loader.load();
+
+        NameTeamsController controller = loader.getController();
+        controller.setTournament(this.tournament);
+
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
