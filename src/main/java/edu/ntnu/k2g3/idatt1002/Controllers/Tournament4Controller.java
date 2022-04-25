@@ -19,7 +19,7 @@ public class Tournament4Controller extends TournamentController {
     @FXML
     private Label winnerFinal, winnerDisplay;
     @FXML
-    private Button exitTournament;
+    private Button exitTournament, saveResult;
     @FXML
     private AnchorPane rightAnchor, leftAnchor, finalAnchor;
 
@@ -31,6 +31,7 @@ public class Tournament4Controller extends TournamentController {
         finalAnchor.setVisible(false);
         winnerDisplay.setVisible(false);
         exitTournament.setVisible(false);
+        saveResult.setVisible(false);
     }
 
     public void winnerSemi1() {
@@ -56,6 +57,7 @@ public class Tournament4Controller extends TournamentController {
             finalAnchor.setVisible(true);
             leftAnchor.setDisable(true);
             rightAnchor.setDisable(true);
+            saveResult.setVisible(true);
             setWinner(winnerDisplay, winnerFinal, exitTournament);
         }
     }

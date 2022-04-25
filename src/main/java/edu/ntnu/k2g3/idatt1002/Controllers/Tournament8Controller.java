@@ -52,7 +52,7 @@ public class Tournament8Controller extends TournamentController {
     private AnchorPane finalMatchAnchor, finalAnchor;
 
     @FXML
-    private Button exitTournament;
+    private Button exitTournament, saveResult;
 
 
     @FXML
@@ -63,6 +63,7 @@ public class Tournament8Controller extends TournamentController {
         finalAnchor.setDisable(true);
         winnerDisplay.setVisible(false);
         exitTournament.setVisible(false);
+        saveResult.setVisible(false);
     }
 
     @FXML
@@ -105,6 +106,7 @@ public class Tournament8Controller extends TournamentController {
                 setNextBracket(finalist2Spinner, finalist1Spinner, winnerFinal, finalist2)){
         finalMatchAnchor.setDisable(true);
         finalAnchor.setDisable(false);
+        saveResult.setVisible(true);
         setWinner(winnerDisplay, winnerFinal, exitTournament);
         }
     }

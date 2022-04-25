@@ -75,6 +75,7 @@ public class Tournament16Controller extends TournamentController {
         finalAnchor.setDisable(true);
         winnerAnchor.setDisable(true);
         exitTournament.setVisible(false);
+        saveResult.setVisible(false);
     }
 
     @FXML
@@ -153,6 +154,7 @@ public class Tournament16Controller extends TournamentController {
                 setNextBracket(spinnerFinal2, spinnerFinal1, winnerFinal, final2)){
             finalAnchor.setDisable(true);
             winnerAnchor.setDisable(false);
+            saveResult.setVisible(true);
             setWinner(winnerDisplay, winnerFinal, exitTournament);
         }
     }
