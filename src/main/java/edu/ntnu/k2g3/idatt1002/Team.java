@@ -10,7 +10,10 @@ package edu.ntnu.k2g3.idatt1002;
 public class Team {
 
     private final String teamName;
-    private Player player1, player2;
+    private final boolean isDoubles;
+    private final Player player1;
+    private final Player player2;
+
 
 
     /**
@@ -24,11 +27,12 @@ public class Team {
      */
     public Team(String teamName, Player player1, Player player2) {
         if (teamName.isBlank()) {
-            throw new IllegalArgumentException("The team needs a name.");
+            throw new IllegalArgumentException("The team needs a name!");
         }
         this.teamName = teamName;
         this.player1 = player1;
         this.player2 = player2;
+        this.isDoubles = true;
     }
 
     /**
@@ -40,7 +44,9 @@ public class Team {
      */
     public Team(Player player){
         this.player1 = player;
-        this.teamName = player.getName();
+        this.player2 = null;
+        this.teamName = player.toString();
+        this.isDoubles = false;
     }
 
     /**
@@ -68,6 +74,16 @@ public class Team {
      */
     public Player getPlayer2(){
         return player2;
+    }
+
+
+    /**
+     * Method for checking if the team is singels or doubles
+     *
+     * @return isDoubles
+     */
+    public boolean isDoubles(){
+        return isDoubles;
     }
 
 }

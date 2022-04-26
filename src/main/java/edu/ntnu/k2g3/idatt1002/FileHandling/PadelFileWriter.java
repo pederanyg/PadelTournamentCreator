@@ -31,16 +31,17 @@ public class PadelFileWriter {
 
             printer.println("Tournament name: " + tournament.getName());
             ArrayList<Team> allTeams = tournament.getTeams();
-            printer.print('\n');
+            printer.println();
 
             for (int i = 0; i < allTeams.size(); i++){
                 printer.print("Team " + (i + 1) + ": " + allTeams.get(i).getTeamName() + ". Players: ");
                 printer.println(allTeams.get(i).getPlayer1() + ", " + allTeams.get(i).getPlayer2());
             }
-            printer.print('\n');
+            printer.println();
 
             for (Match match : tournament.getMatches()) {
-                printer.print(match.toString() + '\n');
+                printer.println(match.toString());
+                printer.println();
             }
         }catch(IOException e){
             e.printStackTrace();
@@ -59,15 +60,16 @@ public class PadelFileWriter {
 
             printer.println("Tournament name: " + tournament.getName());
             ArrayList<Team> allTeams = tournament.getTeams();
-            printer.print('\n');
+            printer.println();
 
             for (int i = 0; i < allTeams.size(); i++){
                 printer.println("Team " + (i + 1) + ": " + allTeams.get(i).getTeamName());
             }
-            printer.print('\n');
+            printer.println();
 
             for (Match match : tournament.getMatches()) {
-                printer.print(match.toString() + '\n');
+                printer.println(match.toString());
+                printer.println();
             }
         }catch(IOException e){
             e.printStackTrace();
