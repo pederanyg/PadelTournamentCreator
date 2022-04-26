@@ -5,6 +5,12 @@ import edu.ntnu.k2g3.idatt1002.*;
 import java.io.*;
 import java.util.ArrayList;
 
+/**
+ * The PadelFileWriter class
+ * A class used to write tournament results to a file
+ *
+ * @author williamlie, annemarieboetvedt
+ */
 public class PadelFileWriter {
 
     /**
@@ -17,6 +23,11 @@ public class PadelFileWriter {
         }
     }
 
+    /**
+     * Method for writing a tournament of type doubles to file
+     *
+     * @param tournament The tournament to be written to file
+     */
     public static void writeDoubleTournamentToFile(Tournament tournament) {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
@@ -46,6 +57,11 @@ public class PadelFileWriter {
         }
     }
 
+    /**
+     * Method for writing a tournament of type singles to file
+     *
+     * @param tournament The tournament to be written to file
+     */
     public static void writeSingleTournamentToFile(Tournament tournament) {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
