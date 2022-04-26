@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 
-import static org.junit.jupiter.api.Assertions.*;
+
 
 public class PadelFileWriterTest {
 
@@ -32,11 +32,6 @@ public class PadelFileWriterTest {
 
         PadelFileWriter.checkDirectory();
         PadelFileWriter.writeSingleTournamentToFile(tournament);
-    }
-
-    @Test
-    public void writeTeamNamesToFile(){
-        PadelFileWriter.writeTeamNamesToFile("src/test/resources/testTeamNames.csv", createListOfTeams());
     }
 
 

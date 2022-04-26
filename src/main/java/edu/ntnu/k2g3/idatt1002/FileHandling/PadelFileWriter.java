@@ -2,9 +2,7 @@ package edu.ntnu.k2g3.idatt1002.FileHandling;
 
 import edu.ntnu.k2g3.idatt1002.*;
 
-import java.awt.*;
 import java.io.*;
-import java.net.URI;
 import java.util.ArrayList;
 
 public class PadelFileWriter {
@@ -23,7 +21,7 @@ public class PadelFileWriter {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
         }
-        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".csv");
+        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".txt");
 
         try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter writer = new BufferedWriter(fileWriter);
@@ -52,7 +50,7 @@ public class PadelFileWriter {
         if (tournament.getMatches().isEmpty()) {
             throw new IllegalArgumentException("The registry is empty.");
         }
-        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".csv");
+        File file = new File(System.getProperty("user.home") + "/PadelTournamentResults/" + tournament.getName() + ".txt");
 
         try (FileWriter fileWriter = new FileWriter(file);
              BufferedWriter writer = new BufferedWriter(fileWriter);
@@ -76,20 +74,5 @@ public class PadelFileWriter {
         }
     }
 
-    public static void writeTeamNamesToFile(String path, ArrayList<String> teamNames){
-        if (path.isBlank()){throw new IllegalArgumentException("Path must be specified.");}
-        if (teamNames.isEmpty()){throw new IllegalArgumentException("There is no teams in this list");}
-        File file = new File(path);
-        try (FileWriter fileWriter = new FileWriter(file);
-             BufferedWriter writer = new BufferedWriter(fileWriter);
-             PrintWriter printer = new PrintWriter(writer)){
-            printer.println("Team names");
-            for (String teamName: teamNames){
-                printer.println(teamName);
-            }
-        }catch(IOException e){
-            e.printStackTrace();
-        }
 
-    }
 }
