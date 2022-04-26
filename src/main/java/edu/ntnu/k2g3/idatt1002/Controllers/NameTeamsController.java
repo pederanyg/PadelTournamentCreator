@@ -22,7 +22,6 @@ public class NameTeamsController{
 
     @FXML
     private ChoiceBox<String> choiceBox;
-
     @FXML
     private ListView<String> listOfTeams;
     @FXML
@@ -157,8 +156,6 @@ public class NameTeamsController{
     public void goToTournament(ActionEvent event) throws IOException {
         FXMLLoader loader;
         Parent root;
-        ArrayList<String> listOfTeamNames = new ArrayList<>(listOfTeams.getItems());
-        PadelFileWriter.writeTeamNamesToFile("src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles/listOfTeamNames.txt", listOfTeamNames);
 
         switch (listOfTeams.getItems().size()) {
             case 4 -> {
