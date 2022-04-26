@@ -24,12 +24,21 @@ public class Player {
     }
 
     /**
-     * Method for getting the name of a player
+     * Gets firstname.
      *
-     * @return the name
+     * @return the first name
      */
-    public String getName() {
-        return firstName + " " + surName;
+    public String getFirstName() {
+        return firstName;
+    }
+
+    /**
+     * Gets surname.
+     *
+     * @return the surname
+     */
+    public String getSurName() {
+        return surName;
     }
 
     @Override

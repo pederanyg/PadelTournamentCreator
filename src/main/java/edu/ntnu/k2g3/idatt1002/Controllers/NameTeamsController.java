@@ -1,6 +1,5 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
-import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileWriter;
 import edu.ntnu.k2g3.idatt1002.Player;
 import edu.ntnu.k2g3.idatt1002.Team;
 import edu.ntnu.k2g3.idatt1002.Tournament;
@@ -16,7 +15,6 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class NameTeamsController{
 

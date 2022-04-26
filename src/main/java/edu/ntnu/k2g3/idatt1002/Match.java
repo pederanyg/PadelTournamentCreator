@@ -19,6 +19,8 @@ public class Match {
      * @param two The second team
      */
     public Match(Team one, Team two){
+        if ((!one.isDoubles() && two.isDoubles()) || (one.isDoubles() && !two.isDoubles())){
+            throw new IllegalArgumentException("The match cannot be between a singles team and a doubles team.");}
         this.team1 = one;
         this.team2 = two;
     }
@@ -60,9 +62,18 @@ public class Match {
         this.result = one + "-" + two;
     }
 
+    /**
+     * Get result.
+     *
+     * @return the string
+     */
+    public String getResult(){
+        return result;
+    }
+
     @Override
     public String toString() {
-        return "Match between " + team1.getTeamName() + " and " + team2.getTeamName() + ", Result: " + result;
+        return "Match between " + team1.getTeamName() + " and " + team2.getTeamName() + "\n  Result: " + result;
     }
 }
 

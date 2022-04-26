@@ -22,6 +22,9 @@ public class Tournament {
      * @param name The name of the tournament
      */
     public Tournament(String name){
+        if (name.isBlank()) {
+            throw new IllegalArgumentException("The Tournament needs a name!");
+        }
         this.teams = new ArrayList<>();
         this.matches = new ArrayList<>();
         this.name = name;
