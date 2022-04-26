@@ -9,62 +9,29 @@ import javafx.scene.layout.AnchorPane;
 
 public class Tournament16Controller extends TournamentController {
     @FXML
-    public Spinner<Integer> spinnerFinal1;
-    public Spinner<Integer> spinnerFinal2;
-    public Spinner<Integer> spinnerSemi1;
-    public Spinner<Integer> spinnerSemi2;
-    public Spinner<Integer> spinnerSemi3;
-    public Spinner<Integer> spinnerSemi4;
-    public Spinner<Integer> spinnerQuarter1;
-    public Spinner<Integer> spinnerQuarter2;
-    public Spinner<Integer> spinnerQuarter3;
-    public Spinner<Integer> spinnerQuarter4;
-    public Spinner<Integer> spinnerQuarter5;
-    public Spinner<Integer> spinnerQuarter6;
-    public Spinner<Integer> spinnerQuarter7;
-    public Spinner<Integer> spinnerQuarter8;
-    public Spinner<Integer> spinner1;
-    public Spinner<Integer> spinner2;
-    public Spinner<Integer> spinner3;
-    public Spinner<Integer> spinner4;
-    public Spinner<Integer> spinner5;
-    public Spinner<Integer> spinner6;
-    public Spinner<Integer> spinner7;
-    public Spinner<Integer> spinner8;
-    public Spinner<Integer> spinner9;
-    public Spinner<Integer> spinner10;
-    public Spinner<Integer> spinner11;
-    public Spinner<Integer> spinner12;
-    public Spinner<Integer> spinner13;
-    public Spinner<Integer> spinner14;
-    public Spinner<Integer> spinner15;
-    public Spinner<Integer> spinner16;
+    public Spinner<Integer> spinnerFinal1, spinnerFinal2;
+    public Spinner<Integer> spinnerSemi1, spinnerSemi2, spinnerSemi3, spinnerSemi4;
+    public Spinner<Integer> spinnerQuarter1, spinnerQuarter2, spinnerQuarter3, spinnerQuarter4;
+    public Spinner<Integer> spinnerQuarter5, spinnerQuarter6, spinnerQuarter7, spinnerQuarter8;
+    public Spinner<Integer> spinner1, spinner2, spinner3, spinner4;
+    public Spinner<Integer> spinner5, spinner6, spinner7, spinner8;
+    public Spinner<Integer> spinner9, spinner10, spinner11,spinner12;
+    public Spinner<Integer> spinner13,spinner14,spinner15,spinner16;
     @FXML
-    public Label quarter1;
-    public Label quarter2;
-    public Label quarter3;
-    public Label quarter4;
-    public Label quarter5;
-    public Label quarter6;
-    public Label quarter7;
-    public Label quarter8;
-    public Label semi1;
-    public Label semi2;
-    public Label semi3;
-    public Label semi4;
-    public Label final1;
-    public Label final2;
-    public Label winnerFinal;
-    public Label winnerDisplay;
     public Label team1, team2, team3, team4, team5, team6, team7, team8;
     public Label team9, team10, team11, team12, team13, team14, team15, team16;
+    public Label quarter1, quarter2, quarter3, quarter4;
+    public Label quarter5, quarter6, quarter7, quarter8;
+    public Label semi1, semi2, semi3, semi4;
+    public Label final1, final2;
+    public Label winnerFinal, winnerDisplay;
     public Button exitTournament, saveResult;
     @FXML
-    private AnchorPane leftAnchor, leftQuarterAnchor;
+    private AnchorPane leftAnchor, leftQuarterAnchor, semiLeftAnchor;
     @FXML
-    private AnchorPane rightAnchor, rightQuarterAnchor;
+    private AnchorPane rightAnchor, rightQuarterAnchor, semiRightAnchor;
     @FXML
-    private AnchorPane semiRightAnchor, semiLeftAnchor, finalAnchor, winnerAnchor;
+    private AnchorPane finalAnchor, winnerAnchor;
 
     public void initialize() {
         leftQuarterAnchor.setDisable(true);

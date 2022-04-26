@@ -41,11 +41,8 @@ hs_err_pid*
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-
-
 # CMake
 cmake-build-*/
-
 
 # File-based project format
 *.iws
@@ -53,10 +50,8 @@ cmake-build-*/
 # IntelliJ
 out/
 
-src/main/resources/edu/ntnu/k2g3/idatt1002/tournamentFiles
 # JIRA plugin
 atlassian-ide-plugin.xml
-
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml

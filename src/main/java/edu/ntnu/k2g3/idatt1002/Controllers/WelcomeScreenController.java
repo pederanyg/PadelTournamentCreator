@@ -22,6 +22,7 @@ public class WelcomeScreenController {
         stage.show();
     }
 
+
     public void exitProgram() {
         System.exit(0);
     }

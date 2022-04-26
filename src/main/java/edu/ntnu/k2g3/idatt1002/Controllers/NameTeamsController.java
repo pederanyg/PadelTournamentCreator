@@ -129,6 +129,7 @@ public class NameTeamsController{
     private void setAllTeamsAdded(){
         startButton.setVisible(true);
         rectangle.setVisible(true);
+        doublesAnchor.setVisible(false);
         teamChooser.setText("All players have been added.");
         if (tournament.isDoubles()){
             teamChooser.setText("All teams have been added.");
