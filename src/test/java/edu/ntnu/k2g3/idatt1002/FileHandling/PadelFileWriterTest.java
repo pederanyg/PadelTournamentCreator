@@ -10,14 +10,28 @@ import static org.junit.jupiter.api.Assertions.*;
 public class PadelFileWriterTest {
 
     @Test
-    public void writeTournamentToFile() {
-        Tournament tournament = new Tournament("Test tournament");
-        tournament.addAll(createTeamRegistry());
+    public void testCheckDirectory(){
+        PadelFileWriter.checkDirectory();
+    }
+
+    @Test
+    public void writeDoubleTournamentToFile() {
+        Tournament tournament = new Tournament("Test double tournament");
+        tournament.addAll(createDoubleTeamRegistry());
         tournament.createNewMatches();
 
         PadelFileWriter.checkDirectory();
-        PadelFileWriter.writeTournamentToFile("src/test/resources/testTeamNames.csv", tournament);
+        PadelFileWriter.writeDoubleTournamentToFile(tournament);
+    }
 
+    @Test
+    public void writeSingleTournamentToFile() {
+        Tournament tournament = new Tournament("Test single tournament");
+        tournament.addAll(createSingleTeamRegistry());
+        tournament.createNewMatches();
+
+        PadelFileWriter.checkDirectory();
+        PadelFileWriter.writeSingleTournamentToFile(tournament);
     }
 
     @Test
@@ -26,12 +40,21 @@ public class PadelFileWriterTest {
     }
 
 
-    private ArrayList<Team> createTeamRegistry(){
-        ArrayList<Team> registry = new ArrayList<Team>();
+    private ArrayList<Team> createDoubleTeamRegistry(){
+        ArrayList<Team> registry = new ArrayList<>();
         registry.add(new Team("team2", new Player("anna", "tvedt"), new Player("helle", "Tvedt")));
         registry.add(new Team("Jens Team",new Player("jens", "tvedt"), new Player("William", "Tvedt")));
         registry.add(new Team("BestTeam",new Player("jens", "tvedt"), new Player("William", "Lie")));
         registry.add(new Team("team6", new Player("anna", "tvedt"), new Player("helle", "Tvedt")));
+        return registry;
+    }
+
+    private ArrayList<Team> createSingleTeamRegistry(){
+        ArrayList<Team> registry = new ArrayList<>();
+        registry.add(new Team(new Player("helle", "Tvedt")));
+        registry.add(new Team(new Player("William", "Tvedt")));
+        registry.add(new Team(new Player("William", "Lie")));
+        registry.add(new Team(new Player("helle", "Tvedt")));
         return registry;
     }
 
@@ -45,8 +68,4 @@ public class PadelFileWriterTest {
         teamNames.add("jens");
         return teamNames;
     }
-
-
-
-
 }
