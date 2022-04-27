@@ -11,8 +11,17 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * Welcome screen controller.
+ */
 public class WelcomeScreenController {
 
+    /**
+     * Go to next stage singels or doubles.
+     *
+     * @param event the event
+     * @throws IOException the io exception
+     */
     public void goToSinglesDoubles(ActionEvent event) throws IOException {
         URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/single-double.fxml").toURI().toURL();
         Parent root = FXMLLoader.load(url);
@@ -22,7 +31,9 @@ public class WelcomeScreenController {
         stage.show();
     }
 
-
+    /**
+     * Exit the program.
+     */
     public void exitProgram() {
         System.exit(0);
     }

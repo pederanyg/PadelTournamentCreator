@@ -6,6 +6,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
 
+/**
+ * Controller for a tournament with 8 players/teams
+ */
 public class Tournament8Controller extends TournamentController {
     @FXML
     private Spinner<Integer> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
@@ -40,6 +43,9 @@ public class Tournament8Controller extends TournamentController {
     private Button exitTournament, saveResult;
 
 
+    /**
+     * Initializing the scene.
+     */
     @FXML
     public void initialize() {
         leftAnchor2.setDisable(true);
@@ -62,7 +68,9 @@ public class Tournament8Controller extends TournamentController {
         }
     }
 
-    @FXML
+    /**
+     * Sets the second rounds.
+     */
     public void setRoundTwo(){
         if (checkAllBracketsRound1()){
             getTournament().createNewMatches();
@@ -75,6 +83,9 @@ public class Tournament8Controller extends TournamentController {
             rightAnchor2.setDisable(false);
         }}
 
+    /**
+     * Sets the final match.
+     */
     @FXML
     public void setFinalRound(){
         if (checkALlBracketsRound2()){
@@ -85,6 +96,9 @@ public class Tournament8Controller extends TournamentController {
         }
     }
 
+    /**
+     * Sets the winner label with whe winner team.
+     */
     @FXML
     public void setWinner(){
         if (setNextBracket(finalist1Spinner, finalist2Spinner, winnerFinal, finalist1) ||

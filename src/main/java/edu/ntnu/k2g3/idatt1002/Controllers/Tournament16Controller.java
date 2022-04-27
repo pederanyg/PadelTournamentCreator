@@ -7,6 +7,9 @@ import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
 
 
+/**
+ * Tournament 16 controller.
+ */
 public class Tournament16Controller extends TournamentController {
     @FXML
     public Spinner<Integer> spinnerFinal1, spinnerFinal2;
@@ -15,8 +18,8 @@ public class Tournament16Controller extends TournamentController {
     public Spinner<Integer> spinnerQuarter5, spinnerQuarter6, spinnerQuarter7, spinnerQuarter8;
     public Spinner<Integer> spinner1, spinner2, spinner3, spinner4;
     public Spinner<Integer> spinner5, spinner6, spinner7, spinner8;
-    public Spinner<Integer> spinner9, spinner10, spinner11,spinner12;
-    public Spinner<Integer> spinner13,spinner14,spinner15,spinner16;
+    public Spinner<Integer> spinner9, spinner10, spinner11, spinner12;
+    public Spinner<Integer> spinner13, spinner14, spinner15, spinner16;
     @FXML
     public Label team1, team2, team3, team4, team5, team6, team7, team8;
     public Label team9, team10, team11, team12, team13, team14, team15, team16;
@@ -33,6 +36,9 @@ public class Tournament16Controller extends TournamentController {
     @FXML
     private AnchorPane finalAnchor, winnerAnchor;
 
+    /**
+     * Initialize.
+     */
     public void initialize() {
         leftQuarterAnchor.setDisable(true);
         rightQuarterAnchor.setDisable(true);
@@ -57,6 +63,11 @@ public class Tournament16Controller extends TournamentController {
     }
 
 
+    /**
+     * Check if all the teams in the first round with 16 brackets is done playing their first match.
+     *
+     * @return the boolean
+     */
     public boolean checkRoundOf16Brackets() {
         boolean one = setNextBracket(spinner1, spinner2, quarter1, team1) || setNextBracket(spinner2, spinner1, quarter1, team2);
         boolean two = setNextBracket(spinner3, spinner4, quarter2, team3) || setNextBracket(spinner4, spinner3, quarter2, team4);
@@ -83,6 +94,9 @@ public class Tournament16Controller extends TournamentController {
         return semiOne && semiTwo;
     }
 
+    /**
+     * Sets the quarter matches.
+     */
     @FXML
     public void setQuarters() {
         if(checkRoundOf16Brackets()) {
@@ -94,6 +108,9 @@ public class Tournament16Controller extends TournamentController {
         }
     }
 
+    /**
+     * Sets the semifinal matches.
+     */
     @FXML
     public void setSemiFinals() {
         if(checkQuarters()) {
@@ -105,6 +122,9 @@ public class Tournament16Controller extends TournamentController {
         }
     }
 
+    /**
+     * Sets the final matches.
+     */
     @FXML
     public void setFinals() {
         if(checkSemis()) {
@@ -115,6 +135,9 @@ public class Tournament16Controller extends TournamentController {
         }
     }
 
+    /**
+     * Set the winner display.
+     */
     @FXML
     public void setWinner(){
         if (setNextBracket(spinnerFinal1, spinnerFinal2, winnerFinal, final1) ||

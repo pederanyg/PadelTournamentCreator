@@ -19,6 +19,11 @@ import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 
+/**
+ * The controller for the singles/doubles scene
+ *
+ * @author jenscl, annamarieboetvedt, williamlie
+ */
 public class SingleDoubleController {
     @FXML
     public AnchorPane singlesDoublesPane, namePane;
@@ -31,6 +36,9 @@ public class SingleDoubleController {
 
     private Tournament tournament;
 
+    /**
+     * Initializing the scene.
+     */
     public void initialize() {
         ToggleGroup group = new ToggleGroup();
         singlesButton.setToggleGroup(group);
@@ -52,13 +60,22 @@ public class SingleDoubleController {
     }
 
 
+    /**
+     * Creates a new tournament with the name given by the user
+     */
     public void createTournament() {
         this.tournament = new Tournament(tournamentName.getText());
         namePane.setDisable(true);
         singlesDoublesPane.setVisible(true);
     }
 
-    public void goToNumberOfTeams(ActionEvent event) throws IOException {
+    /**
+     * Method for sending the user to the name teams scene
+     *
+     * @param event The event
+     * @throws IOException May throw an exception if something goes wrong
+     */
+    public void goToNameTeams(ActionEvent event) throws IOException {
         URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/nameTeam.fxml").toURI().toURL();
         FXMLLoader loader = new FXMLLoader(url);
         Parent root = loader.load();

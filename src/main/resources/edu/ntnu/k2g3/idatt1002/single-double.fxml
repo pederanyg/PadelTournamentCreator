@@ -18,7 +18,7 @@
       </ImageView>
       <AnchorPane fx:id="singlesDoublesPane" layoutX="20.0" layoutY="133.0" prefHeight="236.0" prefWidth="559.0">
          <children>
-              <Button fx:id="confirm" layoutX="221.0" layoutY="158.0" mnemonicParsing="false" onAction="#goToNumberOfTeams" text="Confirm">
+              <Button fx:id="confirm" layoutX="221.0" layoutY="158.0" mnemonicParsing="false" onAction="#goToNameTeams" text="Confirm">
                   <font>
                       <Font size="24.0" />
                   </font>

@@ -16,6 +16,11 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Controller for the team naming scene
+ *
+ * @author jensl, annamarieboetvedt, williamlie
+ */
 public class NameTeamsController{
 
     @FXML
@@ -45,6 +50,9 @@ public class NameTeamsController{
     private Tournament tournament;
 
 
+    /**
+     * Initializing the scene.
+     */
     public void initialize() {
         numberOfTeamsChoiceBox.getItems().setAll(4,8,16);
         confirm.setDisable(true);
@@ -69,11 +77,19 @@ public class NameTeamsController{
         });
     }
 
+    /**
+     * When the teams are selected, the confirm button able to be pressed
+     */
     @FXML
     public void teamsSelected() {
         confirm.setDisable(false);
     }
 
+    /**
+     * Method for setting the tournament
+     *
+     * @param tournament The tournament to be set
+     */
     public void setTournament(Tournament tournament){
         this.tournament = tournament;
         if (tournament.isDoubles()){
@@ -86,6 +102,11 @@ public class NameTeamsController{
         }
     }
 
+    /**
+     * Method for creating the team list to be visualized for the user
+     *
+     * @param numberOfTeams The number of teams to added
+     */
     public void createTeamList(int numberOfTeams) {
         if(tournament.isDoubles()){
             for(int i = 0; i < numberOfTeams; i++){
@@ -95,12 +116,20 @@ public class NameTeamsController{
                 choiceBox.getItems().add("Player" + (i + 1));}
         }}
 
+    /**
+     * Method for setting the add button to being able to be pressed
+     */
     @FXML
     public void chosenTeam() {
-        //playerNameField.setText(choiceBox.getValue()); //set prompt tekst? da må man skrive navn?
         addButton.setDisable(false);
     }
 
+    /**
+     * Adds the team to the textField to visualize what teams
+     * are created
+     *
+     * @param nameField the name field in which the player info is stored
+     */
     @FXML
     public void addTeamToListOfTeams(TextField nameField) {
         try{
@@ -126,6 +155,12 @@ public class NameTeamsController{
         }
     }
 
+    /**
+     * Method for when all teams are added
+     * Changes the GUI for the user
+     *
+     */
+
     private void setAllTeamsAdded(){
         startButton.setVisible(true);
         rectangle.setVisible(true);
@@ -136,21 +171,44 @@ public class NameTeamsController{
         }
     }
 
+    /**
+     * Method for creating a new team
+     * Takes different input if the tournament is doubles
+     *
+     * @return The team
+     * @throws IllegalArgumentException
+     */
+
     private Team createTeam()throws IllegalArgumentException{
         if (tournament.isDoubles()){
             return new Team(teamNameField.getText(), createPlayer(playerOne), createPlayer(playerTwo));
         }else return new Team(createPlayer(playerNameField));
     }
 
-    private Player createPlayer(TextField player)throws IllegalArgumentException {
-        String[] list = player.getText().split(" ");
+    /**
+     * Method for creating a player from a text field
+     *
+     * @param textfield The textfield to get player info from
+     * @return returns a new Player by using the input
+     * @throws IllegalArgumentException Throws an exception if the player is not given a full name
+     */
+
+    private Player createPlayer(TextField textfield)throws IllegalArgumentException {
+        String[] list = textfield.getText().split(" ");
         if (list.length < 2){throw new IllegalArgumentException("Player needs a full name!");}
         String surname = list[list.length - 1];
-        String firstname = player.getText().replace(surname, "");
+        String firstname = textfield.getText().replace(surname, "");
         return new Player(firstname, surname);
     }
 
 
+    /**
+     * Method for changing scene to the tournament stage
+     * Reads the amount of teams registered, and sends the user to the correct scene
+     *
+     * @param event The event
+     * @throws IOException May throw an exception if something fails
+     */
     @FXML
     public void goToTournament(ActionEvent event) throws IOException {
         FXMLLoader loader;
