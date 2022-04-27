@@ -5,17 +5,24 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.NameTeamsController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #82d4ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.NameTeamsController">
    <children>
+      <ImageView fitHeight="192.0" fitWidth="316.0" layoutX="134.0" layoutY="-22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
       <ChoiceBox fx:id="choiceBox" layoutX="80.0" layoutY="165.0" onAction="#chosenTeam" prefWidth="150.0" />
       <Label fx:id="teamNameLabel" layoutX="105.0" layoutY="241.0" text="Enter player name:" />
       <TextField fx:id="playerNameField" layoutX="76.0" layoutY="284.0" promptText="Player name..." />
       <Button fx:id="addButton" layoutX="118.0" layoutY="344.0" mnemonicParsing="false" prefWidth="76.0" text="Add player" />
-      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#ebebeb" height="416.0" layoutX="2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="600.0" />
+      <Rectangle fx:id="rectangle" arcHeight="5.0" arcWidth="5.0" fill="#82d4ff" height="416.0" layoutX="2.0" layoutY="-2.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" visible="false" width="600.0" />
       <ListView fx:id="listOfTeams" editable="false" layoutX="349.0" layoutY="5.0" prefHeight="390.0" prefWidth="243.0" />
       <Button fx:id="startButton" layoutX="77.0" layoutY="200.0" mnemonicParsing="false" onAction="#goToTournament" text="Start tournament!">
          <font>
