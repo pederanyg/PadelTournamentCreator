@@ -14,8 +14,6 @@ public class Team {
     private final Player player1;
     private final Player player2;
 
-
-
     /**
      * Constructor for instantiating a new Team.
      * This constructor is used when playing a doubles tournament
@@ -75,7 +73,6 @@ public class Team {
     public Player getPlayer2(){
         return player2;
     }
-
 
     /**
      * Method for checking if the team is singels or doubles

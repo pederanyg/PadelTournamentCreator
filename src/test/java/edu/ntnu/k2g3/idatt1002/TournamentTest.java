@@ -10,8 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class TournamentTest {
 
-
-
     @Test
     public void addTeam() {
         Tournament tournament = new Tournament("Padel tournament");
@@ -41,5 +39,25 @@ public class TournamentTest {
         tournament.addAll(teams);
         tournament.createNewMatches();
         assertEquals(tournament.getMatches().size(), 2);
+    }
+
+    @Test
+    public void createNewMatchesWithNumberOutOfBounds(){
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
+                Tournament tournament = new Tournament("Padel tournament");
+                ArrayList<Team> teams = new ArrayList<>(Arrays.asList(
+                        new Team(new Player("player", "one")),
+                        new Team(new Player("player", "two")),
+                        new Team(new Player("player", "three")),
+                        new Team(new Player("player", "four")),
+                        new Team(new Player("player", "five")),
+                        new Team(new Player("player", "six")),
+                        new Team(new Player("player", "seven")),
+                        new Team(new Player("player", "eight")),
+                        new Team(new Player("player", "nine"))));
+                tournament.addAll(teams);
+                tournament.createNewMatches();});
+
+        assertEquals(thrown.getMessage(),"The teams must be an even number.");
     }
 }

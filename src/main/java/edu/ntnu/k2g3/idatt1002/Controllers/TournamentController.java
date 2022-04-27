@@ -79,10 +79,7 @@ public abstract class TournamentController {
     }
 
     public void saveTournamentToFile(){
-        PadelFileWriter.checkDirectory();
-        if (tournament.isDoubles()){
-            PadelFileWriter.writeDoubleTournamentToFile(tournament);
-        }else PadelFileWriter.writeSingleTournamentToFile(tournament);
+        PadelFileWriter.writeTournamentToFile(tournament);
     }
 
 

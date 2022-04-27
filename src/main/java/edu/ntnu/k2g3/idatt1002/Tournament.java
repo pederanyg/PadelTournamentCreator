@@ -115,6 +115,8 @@ public class Tournament {
      *
      */
     public void createNewMatches(){
+        if (teams.size() % 2 != 0){
+            throw new IllegalArgumentException("The teams must be an even number.");}
         if (matches.isEmpty()){
             Collections.shuffle(teams);
             createMatches(teams);
