@@ -29,7 +29,7 @@ pages:
   stage: deploy
   script:
     - mkdir .public
-    - cp -r "target/site/apidocs/"* .public
+    - cp -r javadoc/* .public
     - mv .public public
   artifacts:
     paths:

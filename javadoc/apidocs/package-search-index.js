@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"edu.ntnu.k2g3.idatt1002.Controllers","l":"edu.ntnu.k2g3.idatt1002"},{"m":"edu.ntnu.k2g3.idatt1002.Controllers","l":"edu.ntnu.k2g3.idatt1002.Controllers"}];updateSearchResults();
