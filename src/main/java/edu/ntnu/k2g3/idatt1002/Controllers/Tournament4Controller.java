@@ -7,6 +7,9 @@ import javafx.scene.control.Spinner;
 import javafx.scene.layout.AnchorPane;
 
 
+/**
+ * The controller for a tournament with 4 players or teams
+ */
 public class Tournament4Controller extends TournamentController {
     @FXML
     private Spinner<Integer> spinnerTeam1, spinnerTeam2, spinnerTeam3, spinnerTeam4;
@@ -24,6 +27,9 @@ public class Tournament4Controller extends TournamentController {
     private AnchorPane rightAnchor, leftAnchor, finalAnchor;
 
 
+    /**
+     * Initializing the scene.
+     */
     @FXML
     public void initialize() {
         rightAnchor.setDisable(true);
@@ -34,6 +40,9 @@ public class Tournament4Controller extends TournamentController {
         saveResult.setVisible(false);
     }
 
+    /**
+     * Method for creating new matches and changing the GUI
+     */
     public void winnerSemi1() {
         if(checkAllBrackets()){
             getTournament().createNewMatches();
@@ -42,6 +51,11 @@ public class Tournament4Controller extends TournamentController {
             finalAnchor.setVisible(true);}
     }
 
+    /**
+     * Check if all the teams is done playing their match.
+     *
+     * @return the boolean
+     */
     private boolean checkAllBrackets(){
        return (setNextBracket(spinnerTeam1, spinnerTeam2, winnerBracket1, team1Label) ||
                 setNextBracket(spinnerTeam2, spinnerTeam1, winnerBracket1, team2Label)) &&
@@ -50,6 +64,9 @@ public class Tournament4Controller extends TournamentController {
     }
 
 
+    /**
+     * Sets the winner display.
+     */
     @FXML
     public void winnerFinal() {
         if(setNextBracket(winnerBracket1Spinner, winnerBracket2Spinner, winnerFinal, winnerBracket1) ||
@@ -63,7 +80,9 @@ public class Tournament4Controller extends TournamentController {
     }
 
 
-    @FXML
+    /**
+     * Displays the names in the GUI
+     */
     public void displayNames() {
         getTournament().createNewMatches();
         Label[] labels = {team1Label, team2Label, team3Label, team4Label};

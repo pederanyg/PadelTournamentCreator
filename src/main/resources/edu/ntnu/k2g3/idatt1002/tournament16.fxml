@@ -3,30 +3,37 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1434.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.Tournament16Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="797.0" prefWidth="1434.0" style="-fx-background-color: #82d4ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.Tournament16Controller">
     <children>
+      <ImageView fitHeight="312.0" fitWidth="535.0" layoutX="450.0" layoutY="-34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
       <AnchorPane fx:id="rightQuarterAnchor" layoutX="991.0" layoutY="5.0" prefHeight="797.0" prefWidth="200.0">
          <children>
             <AnchorPane fx:id="quarterAnchor3" layoutX="54.0" layoutY="7.0" prefHeight="404.0" prefWidth="210.0">
                <children>
                     <Spinner fx:id="spinnerQuarter5" layoutX="48.0" layoutY="41.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
-                    <Label fx:id="quarter5" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                  <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" />
-                  <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" />
-                  <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" />
-                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                    <Label fx:id="quarter5" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <Line endX="255.0" endY="7.62939453125E-6" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" strokeWidth="2.0" />
+                  <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" strokeWidth="2.0" />
+                  <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" strokeWidth="2.0" />
+                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                   <AnchorPane layoutX="-4.0" layoutY="211.0" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <Spinner fx:id="spinnerQuarter6" layoutX="48.0" layoutY="41.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
-                        <Label fx:id="quarter6" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                        <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" />
-                        <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" />
-                        <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" />
-                        <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                        <Label fx:id="quarter6" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                        <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" strokeWidth="2.0" />
+                        <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" strokeWidth="2.0" />
+                        <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" strokeWidth="2.0" />
+                        <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -34,19 +41,19 @@
             <AnchorPane fx:id="quarterAnchor4" layoutX="50.0" layoutY="415.0" prefHeight="378.0" prefWidth="212.0">
                <children>
                   <Spinner fx:id="spinnerQuarter7" layoutX="48.0" layoutY="41.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="quarter7" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                  <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" />
-                  <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" />
-                  <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" />
-                  <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                  <Label fx:id="quarter7" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" strokeWidth="2.0" />
+                  <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" strokeWidth="2.0" />
+                  <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" strokeWidth="2.0" />
+                  <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                   <AnchorPane layoutY="201.0" prefHeight="200.0" prefWidth="200.0">
                      <children>
                         <Spinner fx:id="spinnerQuarter8" layoutX="48.0" layoutY="41.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
-                        <Label fx:id="quarter8" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                        <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" />
-                        <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" />
-                        <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" />
-                        <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                        <Label fx:id="quarter8" alignment="CENTER" layoutX="48.0" layoutY="67.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                        <Line endX="258.0" layoutX="-49.0" layoutY="38.0" startX="164.9000244140625" strokeWidth="2.0" />
+                        <Line endX="258.4000244140625" endY="-330.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-302.0" strokeWidth="2.0" />
+                        <Line endX="171.9000244140625" endY="-34.5" layoutX="-56.0" layoutY="195.0" startX="171.9000244140625" startY="-61.0" strokeWidth="2.0" />
+                        <Line endX="256.0" endY="-89.79998779296875" layoutX="-46.0" layoutY="250.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                      </children>
                   </AnchorPane>
                </children>
@@ -57,19 +64,19 @@
          <children>
             <AnchorPane fx:id="quarterAnchor1" layoutX="8.0" layoutY="36.0" prefHeight="378.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" />
-                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" />
-                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" />
-                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" />
-                    <Label fx:id="quarter1" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" strokeWidth="2.0" />
+                    <Label fx:id="quarter1" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                     <Spinner fx:id="spinnerQuarter1" layoutX="93.0" layoutY="20.0" max="7" min="0" prefHeight="26.0" prefWidth="54.0" />
                   <AnchorPane layoutY="203.0" prefHeight="161.0" prefWidth="200.0">
                      <children>
-                        <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" />
-                        <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" />
-                        <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" />
-                        <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" />
-                        <Label fx:id="quarter2" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                        <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                        <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                        <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                        <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" strokeWidth="2.0" />
+                        <Label fx:id="quarter2" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                         <Spinner fx:id="spinnerQuarter2" layoutX="93.0" layoutY="20.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
                      </children>
                   </AnchorPane>
@@ -77,19 +84,19 @@
             </AnchorPane>
             <AnchorPane fx:id="quarterAnchor2" layoutX="8.0" layoutY="440.0" prefHeight="355.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" />
-                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" />
-                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" />
-                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" />
-                  <Label fx:id="quarter3" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" strokeWidth="2.0" />
+                  <Label fx:id="quarter3" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinnerQuarter3" layoutX="93.0" layoutY="20.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
                   <AnchorPane layoutY="194.0" prefHeight="161.0" prefWidth="200.0">
                      <children>
-                        <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" />
-                        <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" />
-                        <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" />
-                        <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" />
-                        <Label fx:id="quarter4" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                        <Line endX="-101.0" endY="26.0" layoutX="173.0" layoutY="19.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                        <Line endX="-33.5" endY="-0.7928924560546875" layoutX="106.0" layoutY="14.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                        <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="105.0" layoutY="155.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                        <Line endX="-99.0928955078125" endY="-110.0" layoutX="170.0" layoutY="223.0" startX="-99.09286499023438" startY="-82.50709533691406" strokeWidth="2.0" />
+                        <Label fx:id="quarter4" alignment="CENTER" layoutX="43.0" layoutY="46.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                         <Spinner fx:id="spinnerQuarter4" layoutX="93.0" layoutY="20.0" max="7" min="0" onMouseClicked="#setSemiFinals" prefHeight="26.0" prefWidth="54.0" />
                      </children>
                   </AnchorPane>
@@ -102,33 +109,33 @@
             <AnchorPane fx:id="leftAnchor1" layoutX="14.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner1" layoutX="100.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team1" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team1" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner2" layoutX="100.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team2" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team2" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="leftAnchor2" layoutX="14.0" layoutY="197.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner3" layoutX="100.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team3" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team3" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner4" layoutX="100.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team4" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team4" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="leftAnchor3" layoutX="14.0" layoutY="398.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner5" layoutX="100.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team5" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team5" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner6" layoutX="100.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team6" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team6" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="leftAnchor4" layoutX="14.0" layoutY="595.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner7" layoutX="100.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team7" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team7" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner8" layoutX="100.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team8" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team8" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
          </children>
@@ -138,33 +145,33 @@
             <AnchorPane fx:id="rightAnchor1" layoutX="14.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner9" layoutX="50.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team9" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team9" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-width: 2; -fx-border-color: black;" />
                   <Spinner fx:id="spinner10" layoutX="50.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team10" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team10" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="rightAnchor2" layoutX="14.0" layoutY="197.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner11" layoutX="50.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team11" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team11" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner12" layoutX="50.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team12" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team12" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="rightAnchor3" layoutX="14.0" layoutY="398.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner13" layoutX="50.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team13" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team13" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner14" layoutX="50.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team14" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team14" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="rightAnchor4" layoutX="14.0" layoutY="595.0" prefHeight="201.0" prefWidth="200.0">
                <children>
                   <Spinner fx:id="spinner15" layoutX="50.0" layoutY="1.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team15" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team15" alignment="CENTER" layoutX="50.0" layoutY="27.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinner16" layoutX="50.0" layoutY="101.0" max="7" min="0" onMouseClicked="#setQuarters" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="team16" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Label fx:id="team16" alignment="CENTER" layoutX="50.0" layoutY="127.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                </children>
             </AnchorPane>
          </children>
@@ -173,21 +180,21 @@
          <children>
             <AnchorPane layoutX="14.0" layoutY="6.0" prefHeight="280.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="55.0" layoutX="158.0" layoutY="52.0" startX="-101.0" startY="-5.2928924560546875" />
-                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="91.0" layoutY="46.0" startX="-120.0" startY="-0.7928924560546875" />
-                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="91.0" layoutY="260.0" startX="-119.0" startY="-13.79998779296875" />
-                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="155.0" layoutY="284.0" startX="-98.29998779296875" startY="-37.29998779296875" />
-                  <Label fx:id="semi1" alignment="CENTER" layoutX="20.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="55.0" layoutX="158.0" layoutY="52.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="91.0" layoutY="46.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="91.0" layoutY="260.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="155.0" layoutY="284.0" startX="-98.29998779296875" startY="-37.29998779296875" strokeWidth="2.0" />
+                  <Label fx:id="semi1" alignment="CENTER" layoutX="20.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinnerSemi1" layoutX="72.0" layoutY="82.0" max="7" min="0" onMouseClicked="#setFinals" prefHeight="26.0" prefWidth="54.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="14.0" layoutY="404.0" prefHeight="280.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="55.0" layoutX="158.0" layoutY="52.0" startX="-101.0" startY="-5.2928924560546875" />
-                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="91.0" layoutY="46.0" startX="-120.0" startY="-0.7928924560546875" />
-                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="91.0" layoutY="260.0" startX="-119.0" startY="-13.79998779296875" />
-                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="155.0" layoutY="284.0" startX="-98.29998779296875" startY="-37.29998779296875" />
-                  <Label fx:id="semi2" alignment="CENTER" layoutX="20.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="55.0" layoutX="158.0" layoutY="52.0" startX="-101.0" startY="-5.2928924560546875" strokeWidth="2.0" />
+                  <Line endX="-33.5" endY="-0.7928924560546875" layoutX="91.0" layoutY="46.0" startX="-120.0" startY="-0.7928924560546875" strokeWidth="2.0" />
+                  <Line endX="-34.79998779296875" endY="-13.79998779296875" layoutX="91.0" layoutY="260.0" startX="-119.0" startY="-13.79998779296875" strokeWidth="2.0" />
+                  <Line endX="-99.0928955078125" endY="-110.0" layoutX="155.0" layoutY="284.0" startX="-98.29998779296875" startY="-37.29998779296875" strokeWidth="2.0" />
+                  <Label fx:id="semi2" alignment="CENTER" layoutX="20.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinnerSemi2" layoutX="72.0" layoutY="82.0" max="7" min="0" onMouseClicked="#setFinals" prefHeight="26.0" prefWidth="54.0" />
                </children>
             </AnchorPane>
@@ -198,21 +205,21 @@
             <AnchorPane layoutX="-1.0" prefHeight="250.0" prefWidth="210.0">
                <children>
                   <Spinner fx:id="spinnerSemi3" layoutX="50.0" layoutY="55.0" max="7" min="0" onMouseClicked="#setFinals" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="semi3" alignment="CENTER" layoutX="50.0" layoutY="81.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                  <Line endX="260.0" layoutX="-50.0" layoutY="14.0" startX="164.9000244140625" />
-                  <Line endX="258.4000244140625" endY="-354.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-288.0" />
-                  <Line endX="172.9000244140625" endY="30.20001220703125" layoutX="-56.0" layoutY="195.0" startX="172.9000244140625" startY="-47.5" />
-                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-45.0" layoutY="315.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                  <Label fx:id="semi3" alignment="CENTER" layoutX="50.0" layoutY="81.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <Line endX="260.0" layoutX="-50.0" layoutY="14.0" startX="164.9000244140625" strokeWidth="2.0" />
+                  <Line endX="258.4000244140625" endY="-354.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-288.0" strokeWidth="2.0" />
+                  <Line endX="172.9000244140625" endY="30.20001220703125" layoutX="-56.0" layoutY="195.0" startX="172.9000244140625" startY="-47.5" strokeWidth="2.0" />
+                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-45.0" layoutY="315.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="-1.0" layoutY="395.0" prefHeight="250.0" prefWidth="210.0">
                <children>
                   <Spinner fx:id="spinnerSemi4" layoutX="50.0" layoutY="55.0" max="7" min="0" onMouseClicked="#setFinals" prefHeight="26.0" prefWidth="54.0" />
-                  <Label fx:id="semi4" alignment="CENTER" layoutX="50.0" layoutY="81.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-                  <Line endX="258.0" layoutX="-50.0" layoutY="14.0" startX="164.9000244140625" />
-                  <Line endX="258.4000244140625" endY="-354.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-288.0" />
-                  <Line endX="172.9000244140625" endY="30.20001220703125" layoutX="-56.0" layoutY="195.0" startX="172.9000244140625" startY="-47.5" />
-                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-45.0" layoutY="315.0" startX="162.4000244140625" startY="-89.80000305175781" />
+                  <Label fx:id="semi4" alignment="CENTER" layoutX="50.0" layoutY="81.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+                  <Line endX="258.0" layoutX="-50.0" layoutY="14.0" startX="164.9000244140625" strokeWidth="2.0" />
+                  <Line endX="258.4000244140625" endY="-354.5" layoutX="-143.0" layoutY="369.0" startX="258.4000244140625" startY="-288.0" strokeWidth="2.0" />
+                  <Line endX="172.9000244140625" endY="30.20001220703125" layoutX="-56.0" layoutY="195.0" startX="172.9000244140625" startY="-47.5" strokeWidth="2.0" />
+                  <Line endX="253.0" endY="-89.80000305175781" layoutX="-45.0" layoutY="315.0" startX="162.4000244140625" startY="-89.80000305175781" strokeWidth="2.0" />
                </children>
             </AnchorPane>
          </children>
@@ -221,37 +228,37 @@
          <children>
             <AnchorPane layoutX="276.0" layoutY="15.0" prefHeight="436.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="47.0" layoutX="192.0" layoutY="115.0" startX="-101.0" startY="-114.0" />
-                  <Label fx:id="final2" alignment="CENTER" layoutX="22.0" layoutY="161.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="47.0" layoutX="192.0" layoutY="115.0" startX="-101.0" startY="-114.0" strokeWidth="2.0" />
+                  <Label fx:id="final2" alignment="CENTER" layoutX="22.0" layoutY="161.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinnerFinal2" layoutX="22.0" layoutY="135.0" max="7" min="0" onMouseClicked="#setWinner" prefHeight="26.0" prefWidth="54.0" />
-                  <Line endX="-101.0" endY="63.0" layoutX="192.0" layoutY="342.0" startX="-101.0" startY="-114.0" />
-                  <Line endX="44.0" layoutX="116.0" startX="-24.5" startY="0.5" />
-                  <Line endX="44.0" layoutX="116.0" layoutY="405.0" startX="-23.5" />
+                  <Line endX="-101.0" endY="63.0" layoutX="192.0" layoutY="342.0" startX="-101.0" startY="-114.0" strokeWidth="2.0" />
+                  <Line endX="44.0" layoutX="116.0" startX="-24.5" startY="0.5" strokeWidth="2.0" />
+                  <Line endX="44.0" layoutX="116.0" layoutY="405.0" startX="-23.5" strokeWidth="2.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="14.0" layoutY="20.0" prefHeight="436.0" prefWidth="200.0">
                <children>
-                  <Line endX="-101.0" endY="47.0" layoutX="159.0" layoutY="114.0" startX="-101.0" startY="-114.0" />
-                  <Label fx:id="final1" alignment="CENTER" layoutX="22.0" layoutY="161.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+                  <Line endX="-101.0" endY="47.0" layoutX="159.0" layoutY="114.0" startX="-101.0" startY="-114.0" strokeWidth="2.0" />
+                  <Label fx:id="final1" alignment="CENTER" layoutX="22.0" layoutY="161.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
                   <Spinner fx:id="spinnerFinal1" layoutX="73.0" layoutY="135.0" max="7" min="0" onMouseClicked="#setWinner" prefHeight="26.0" prefWidth="54.0" />
-                  <Line endX="-101.0" endY="60.5" layoutX="159.0" layoutY="342.0" startX="-101.0" startY="-114.0" />
-                  <Line endX="39.5" layoutX="18.0" layoutY="403.0" startX="-44.0" />
-                  <Line endX="39.5" layoutX="18.0" layoutY="1.0" startX="-44.0" />
+                  <Line endX="-101.0" endY="60.5" layoutX="159.0" layoutY="342.0" startX="-101.0" startY="-114.0" strokeWidth="2.0" />
+                  <Line endX="39.5" layoutX="18.0" layoutY="403.0" startX="-44.0" strokeWidth="2.0" />
+                  <Line endX="39.5" layoutX="18.0" layoutY="1.0" startX="-44.0" strokeWidth="2.0" />
                </children>
             </AnchorPane>
          </children>
       </AnchorPane>
       <AnchorPane fx:id="winnerAnchor" layoutX="616.0" layoutY="46.0" prefHeight="404.0" prefWidth="200.0">
          <children>
-              <Label fx:id="winnerFinal" alignment="CENTER" layoutX="52.0" layoutY="181.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+              <Label fx:id="winnerFinal" alignment="CENTER" layoutX="52.0" layoutY="181.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
       
-                    <Line fx:id="finalWinnerLine2" endX="-48.000030517578125" endY="-168.59999084472656" layoutX="151.0" layoutY="416.0" startX="-47.999969482421875" startY="-61.19999694824219" />
-              <Line fx:id="finalWinnerLine1" endX="96.0" endY="-88.80001831054688" layoutX="83.0" layoutY="444.0" startX="-63.000030517578125" startY="-88.80001831054688" />
+                    <Line fx:id="finalWinnerLine2" endX="-48.000030517578125" endY="-168.59999084472656" layoutX="151.0" layoutY="416.0" startX="-47.999969482421875" startY="-61.19999694824219" strokeWidth="2.0" />
+              <Line fx:id="finalWinnerLine1" endX="96.0" endY="-88.80001831054688" layoutX="83.0" layoutY="444.0" startX="-63.000030517578125" startY="-88.80001831054688" strokeWidth="2.0" />
          </children>
       </AnchorPane>
         <Button fx:id="exitTournament" layoutX="536.0" layoutY="717.0" mnemonicParsing="false" onAction="#returnToFirstScene" prefHeight="43.0" prefWidth="160.0" text="Go to home screen">
             <font>
-                <Font size="14.0" />
+                <Font name="System Bold" size="14.0" />
             </font>
         </Button>
         <Label fx:id="winnerDisplay" layoutX="596.0" layoutY="650.0" text="Winner displayed here">
@@ -261,7 +268,7 @@
         </Label>
       <Button fx:id="saveResult" layoutX="716.0" layoutY="717.0" mnemonicParsing="false" onAction="#saveTournamentToFile" prefHeight="43.0" prefWidth="160.0" text="Save results">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
     </children>

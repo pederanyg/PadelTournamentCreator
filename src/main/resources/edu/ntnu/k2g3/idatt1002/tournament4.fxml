@@ -3,29 +3,36 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Spinner?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="678.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.Tournament4Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="469.0" prefWidth="678.0" style="-fx-background-color: #82d4ff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.ntnu.k2g3.idatt1002.Controllers.Tournament4Controller">
     <children>
+      <ImageView fitHeight="213.0" fitWidth="390.0" layoutX="153.0" layoutY="194.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/logo.png" />
+         </image>
+      </ImageView>
       <AnchorPane fx:id="finalAnchor" layoutX="215.0" layoutY="70.0" prefHeight="203.0" prefWidth="244.0">
          <children>
       
-              <Line fx:id="finalLine3" endX="-100.00001525878906" endY="-91.79998779296875" layoutX="224.0" layoutY="125.0" startX="-100.0" />
-              <Line fx:id="finalLine1" endX="-9.29290771484375" endY="-0.29290771484375" layoutX="134.0" layoutY="126.0" startX="-73.0" startY="0.20001220703125" />
-              <Label fx:id="winnerFinal" alignment="CENTER" layoutX="71.0" layoutY="-33.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
-            <Line fx:id="finalLine2" endX="-19.0" endY="0.20001220703125" layoutX="197.0" layoutY="126.0" startX="-73.0" startY="0.20001220703125" />
+              <Line fx:id="finalLine3" endX="-100.00001525878906" endY="-91.79998779296875" layoutX="224.0" layoutY="125.0" startX="-100.0" strokeWidth="2.0" />
+              <Line fx:id="finalLine1" endX="-9.29290771484375" endY="-0.29290771484375" layoutX="134.0" layoutY="126.0" startX="-73.0" startY="0.20001220703125" strokeWidth="2.0" />
+              <Label fx:id="winnerFinal" alignment="CENTER" layoutX="71.0" layoutY="-33.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
+            <Line fx:id="finalLine2" endX="-19.0" endY="0.20001220703125" layoutX="197.0" layoutY="126.0" startX="-73.0" startY="0.20001220703125" strokeWidth="2.0" />
          </children>
       </AnchorPane>
       <AnchorPane fx:id="leftAnchor" layoutX="86.0" layoutY="60.0" prefHeight="294.0" prefWidth="200.0">
          <children>
-              <Line fx:id="line2Team1" endX="-100.0" endY="92.5" layoutX="222.0" layoutY="14.0" startX="-100.0" />
+              <Line fx:id="line2Team1" endX="-100.0" endY="92.5" layoutX="222.0" layoutY="14.0" startX="-100.0" strokeWidth="2.0" />
       
-              <Line fx:id="line1Team1" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="131.0" layoutY="14.0" startX="-100.0" />
-              <Line fx:id="line1Team2" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="131.0" layoutY="275.0" startX="-100.0" />
-              <Line fx:id="line2Team2" endX="-99.09291076660156" endY="-93.60000610351562" layoutX="220.0" layoutY="267.0" startX="-99.0928955078125" startY="6.70709228515625" />
-              <Label fx:id="winnerBracket1" alignment="CENTER" layoutX="86.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+              <Line fx:id="line1Team1" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="131.0" layoutY="14.0" startX="-100.0" strokeWidth="2.0" />
+              <Line fx:id="line1Team2" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="131.0" layoutY="275.0" startX="-100.0" strokeWidth="2.0" />
+              <Line fx:id="line2Team2" endX="-99.09291076660156" endY="-93.60000610351562" layoutX="220.0" layoutY="267.0" startX="-99.0928955078125" startY="6.70709228515625" strokeWidth="2.0" />
+              <Label fx:id="winnerBracket1" alignment="CENTER" layoutX="86.0" layoutY="107.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
               <Spinner fx:id="winnerBracket1Spinner" layoutX="138.0" layoutY="81.0" max="7" min="0" onMouseClicked="#winnerFinal" prefHeight="26.0" prefWidth="54.0" />
          </children>
       </AnchorPane>
@@ -33,25 +40,25 @@
          <children>
       
       
-              <Line fx:id="line2Team3" endX="-100.0" endY="101.0" layoutX="154.0" layoutY="10.0" startX="-100.0" startY="2.4999847412109375" />
-              <Line fx:id="line1Team3" endX="-7.0" endY="-1.52587890625E-5" layoutX="152.0" layoutY="12.0" startX="-97.5" startY="-1.52587890625E-5" />
-              <Line fx:id="line2Team4" endX="-100.0" endY="69.40000915527344" layoutX="154.0" layoutY="207.0" startX="-100.0" startY="-30.600006103515625" />
-              <Line fx:id="line1Team4" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="154.0" layoutY="277.0" startX="-100.0" />
+              <Line fx:id="line2Team3" endX="-100.0" endY="101.0" layoutX="154.0" layoutY="10.0" startX="-100.0" startY="2.4999847412109375" strokeWidth="2.0" />
+              <Line fx:id="line1Team3" endX="-7.0" endY="-1.52587890625E-5" layoutX="152.0" layoutY="12.0" startX="-97.5" startY="-1.52587890625E-5" strokeWidth="2.0" />
+              <Line fx:id="line2Team4" endX="-100.0" endY="69.40000915527344" layoutX="154.0" layoutY="207.0" startX="-100.0" startY="-30.600006103515625" strokeWidth="2.0" />
+              <Line fx:id="line1Team4" endX="-9.79998779296875" endY="-1.52587890625E-5" layoutX="154.0" layoutY="277.0" startX="-100.0" strokeWidth="2.0" />
               <Spinner fx:id="winnerBracket2Spinner" layoutX="-19.0" layoutY="86.0" max="7" min="0" onMouseClicked="#winnerFinal" prefHeight="26.0" prefWidth="54.0" />
-              <Label fx:id="winnerBracket2" alignment="CENTER" layoutX="-19.0" layoutY="112.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" />
+              <Label fx:id="winnerBracket2" alignment="CENTER" layoutX="-19.0" layoutY="112.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" />
          </children>
       </AnchorPane>
         <Spinner fx:id="spinnerTeam1" layoutX="63.0" layoutY="14.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
-        <Label fx:id="team2Label" alignment="CENTER" layoutX="14.0" layoutY="301.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 2" />
-        <Label fx:id="team1Label" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 1" />
+        <Label fx:id="team2Label" alignment="CENTER" layoutX="14.0" layoutY="301.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Team 2" />
+        <Label fx:id="team1Label" alignment="CENTER" layoutX="14.0" layoutY="40.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Team 1" />
         <Spinner fx:id="spinnerTeam2" layoutX="63.0" layoutY="274.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
-        <Label fx:id="team4Label" alignment="CENTER" layoutX="560.0" layoutY="300.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 4" />
-        <Label fx:id="team3Label" alignment="CENTER" layoutX="560.0" layoutY="40.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: grey;" text="Team 3" />
+        <Label fx:id="team4Label" alignment="CENTER" layoutX="560.0" layoutY="300.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Team 4" />
+        <Label fx:id="team3Label" alignment="CENTER" layoutX="560.0" layoutY="40.0" prefHeight="66.0" prefWidth="104.0" style="-fx-border-color: black; -fx-border-width: 2;" text="Team 3" />
         <Spinner fx:id="spinnerTeam4" layoutX="561.0" layoutY="274.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
         <Spinner fx:id="spinnerTeam3" layoutX="561.0" layoutY="14.0" max="7" min="0" onMouseClicked="#winnerSemi1" prefHeight="26.0" prefWidth="54.0" />
         <Button fx:id="exitTournament" layoutX="186.0" layoutY="421.0" mnemonicParsing="false" onAction="#returnToFirstScene" text="Go to home screen">
             <font>
-                <Font size="14.0" />
+                <Font name="System Bold" size="14.0" />
             </font>
         </Button>
         <Label fx:id="winnerDisplay" layoutX="219.0" layoutY="366.0" text="Winner displayed here" textAlignment="CENTER">
@@ -61,7 +68,7 @@
         </Label>
       <Button fx:id="saveResult" layoutX="339.0" layoutY="421.0" mnemonicParsing="false" onAction="#saveTournamentToFile" prefHeight="27.0" prefWidth="130.0" text="Save results">
          <font>
-            <Font size="14.0" />
+            <Font name="System Bold" size="14.0" />
          </font>
       </Button>
     </children>
