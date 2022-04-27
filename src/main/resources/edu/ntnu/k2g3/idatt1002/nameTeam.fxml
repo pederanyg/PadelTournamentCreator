@@ -34,16 +34,16 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <AnchorPane fx:id="doublesAnchor" layoutX="13.0" layoutY="264.0" prefHeight="80.0" prefWidth="300.0" visible="false">
+      <AnchorPane fx:id="doublesAnchor" layoutX="13.0" layoutY="264.0" prefHeight="80.0" prefWidth="300.0" style="-fx-background-color: #82d4ff;" visible="false">
          <children>
             <TextField fx:id="playerOne" layoutX="14.0" layoutY="40.0" prefHeight="26.0" prefWidth="125.0" promptText="Player one" />
             <TextField fx:id="playerTwo" layoutX="150.0" layoutY="40.0" prefHeight="26.0" prefWidth="125.0" promptText="Player two" />
             <TextField fx:id="teamNameField" layoutX="88.0" layoutY="7.0" prefHeight="26.0" prefWidth="125.0" promptText="Team name" />
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="numberOfTeamsAnchor" layoutX="3.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" visible="false">
+      <AnchorPane fx:id="numberOfTeamsAnchor" layoutX="3.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #82d4ff;" visible="true">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fcf9f9" height="416.0" layoutX="-13.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="621.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#82d4ff" height="416.0" layoutX="-13.0" layoutY="-10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="621.0" />
             <Label layoutX="74.0" layoutY="14.0" text="Choose the amount of teams playing in your tournament">
                <font>
                   <Font size="18.0" />
