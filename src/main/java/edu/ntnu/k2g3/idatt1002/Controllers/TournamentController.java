@@ -93,7 +93,6 @@ public abstract class TournamentController {
         button.setVisible(true);
     }
 
-
     /**
      * Sets the next bracket with the winners name.
      *

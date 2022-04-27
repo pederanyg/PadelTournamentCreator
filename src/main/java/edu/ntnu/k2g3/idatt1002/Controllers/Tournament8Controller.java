@@ -57,7 +57,9 @@ public class Tournament8Controller extends TournamentController {
         saveResult.setVisible(false);
     }
 
-    @FXML
+    /**
+     * Displays the names in the GUI
+     */
     public void displayNames() {
         getTournament().createNewMatches();
         Label[] labels = {team1Label,team2Label, team3Label,team4Label,team5Label,team6Label,team7Label,team8Label};
@@ -110,7 +112,11 @@ public class Tournament8Controller extends TournamentController {
         }
     }
 
-
+    /**
+     * Check if all the teams in the first round with 8 brackets is done playing their match.
+     *
+     * @return the boolean
+     */
     private boolean checkAllBracketsRound1(){
         boolean one = setNextBracket(spinnerTeam1, spinnerTeam2, winnerBracket1, team1Label) ||
                 setNextBracket(spinnerTeam2, spinnerTeam1, winnerBracket1, team2Label);
@@ -124,6 +130,11 @@ public class Tournament8Controller extends TournamentController {
         return one && two && three && four;
     }
 
+    /**
+     * Check if all the teams in the second round with 4 brackets is done playing their match.
+     *
+     * @return the boolean
+     */
     private boolean checkALlBracketsRound2(){
         boolean one = setNextBracket(bracket1Spinner, bracket2Spinner, finalist1, winnerBracket1) ||
                 setNextBracket(bracket2Spinner, bracket1Spinner, finalist1, winnerBracket2);

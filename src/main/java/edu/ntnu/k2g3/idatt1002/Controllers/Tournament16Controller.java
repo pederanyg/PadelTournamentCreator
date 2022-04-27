@@ -51,6 +51,9 @@ public class Tournament16Controller extends TournamentController {
         saveResult.setVisible(false);
     }
 
+    /**
+     * Displays the names in the GUI.
+     */
     @FXML
     public void displayNames() {
         getTournament().createNewMatches();
@@ -80,6 +83,12 @@ public class Tournament16Controller extends TournamentController {
         return one && two && three && four && five && six && seven && eight;
     }
 
+    /**
+     * Check if all the teams in the quarter round with 8 brackets is done playing their match.
+     *
+     * @return the boolean
+     */
+
     private boolean checkQuarters() {
         boolean quarterOne = setNextBracket(spinnerQuarter1, spinnerQuarter2, semi1, quarter1) || setNextBracket(spinnerQuarter2, spinnerQuarter1, semi1, quarter2);
         boolean quarterTwo = setNextBracket(spinnerQuarter3, spinnerQuarter4, semi2, quarter3) || setNextBracket(spinnerQuarter4, spinnerQuarter3, semi2, quarter4);
@@ -88,6 +97,11 @@ public class Tournament16Controller extends TournamentController {
         return quarterOne && quarterTwo && quarterThree && quarterFour;
     }
 
+    /**
+     * Check if all the teams in the quarter round with 4 brackets is done playing their match.
+     *
+     * @return the boolean
+     */
     private boolean checkSemis() {
         boolean semiOne = setNextBracket(spinnerSemi1, spinnerSemi2, final1, semi1) || setNextBracket(spinnerSemi2, spinnerSemi1, final1, semi2);
         boolean semiTwo = setNextBracket(spinnerSemi3, spinnerSemi4, final2, semi3) || setNextBracket(spinnerSemi4, spinnerSemi3, final2, semi4);

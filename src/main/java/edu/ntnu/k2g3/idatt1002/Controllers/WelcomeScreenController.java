@@ -37,5 +37,4 @@ public class WelcomeScreenController {
     public void exitProgram() {
         System.exit(0);
     }
-
 }

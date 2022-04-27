@@ -51,6 +51,11 @@ public class Tournament4Controller extends TournamentController {
             finalAnchor.setVisible(true);}
     }
 
+    /**
+     * Check if all the teams is done playing their match.
+     *
+     * @return the boolean
+     */
     private boolean checkAllBrackets(){
        return (setNextBracket(spinnerTeam1, spinnerTeam2, winnerBracket1, team1Label) ||
                 setNextBracket(spinnerTeam2, spinnerTeam1, winnerBracket1, team2Label)) &&
@@ -75,7 +80,9 @@ public class Tournament4Controller extends TournamentController {
     }
 
 
-    @FXML
+    /**
+     * Displays the names in the GUI
+     */
     public void displayNames() {
         getTournament().createNewMatches();
         Label[] labels = {team1Label, team2Label, team3Label, team4Label};
