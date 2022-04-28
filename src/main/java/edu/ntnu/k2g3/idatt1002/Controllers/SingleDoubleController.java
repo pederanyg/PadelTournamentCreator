@@ -1,5 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.Main;
 import edu.ntnu.k2g3.idatt1002.Tournament;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -76,11 +77,10 @@ public class SingleDoubleController {
      * @throws IOException May throw an exception if something goes wrong
      */
     public void goToNameTeams(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/nameTeam.fxml").toURI().toURL();
-        FXMLLoader loader = new FXMLLoader(url);
-        Parent root = loader.load();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("nameTeam.fxml"));
+        Parent root = fxmlLoader.load();
 
-        NameTeamsController controller = loader.getController();
+        NameTeamsController controller = fxmlLoader.getController();
         controller.setTournament(this.tournament);
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

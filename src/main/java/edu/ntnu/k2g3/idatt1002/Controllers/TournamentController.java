@@ -1,6 +1,7 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
 import edu.ntnu.k2g3.idatt1002.FileHandling.PadelFileWriter;
+import edu.ntnu.k2g3.idatt1002.Main;
 import edu.ntnu.k2g3.idatt1002.Match;
 import edu.ntnu.k2g3.idatt1002.Tournament;
 import javafx.event.ActionEvent;
@@ -70,12 +71,10 @@ public abstract class TournamentController {
      * @throws IOException the io exception
      */
     public void returnToFirstScene(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/welcomescreen.fxml").toURI().toURL();
-        FXMLLoader loader = new FXMLLoader(url);
-        Parent root = loader.load();
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("welcomescreen.fxml"));
 
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         stage.show();
     }

@@ -1,5 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -23,10 +24,9 @@ public class WelcomeScreenController {
      * @throws IOException the io exception
      */
     public void goToSinglesDoubles(ActionEvent event) throws IOException {
-        URL url = new File("src/main/resources/edu/ntnu/k2g3/idatt1002/single-double.fxml").toURI().toURL();
-        Parent root = FXMLLoader.load(url);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("single-double.fxml"));
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setScene(scene);
         stage.show();
     }

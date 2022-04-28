@@ -1,5 +1,6 @@
 package edu.ntnu.k2g3.idatt1002.Controllers;
 
+import edu.ntnu.k2g3.idatt1002.Main;
 import edu.ntnu.k2g3.idatt1002.Player;
 import edu.ntnu.k2g3.idatt1002.Team;
 import edu.ntnu.k2g3.idatt1002.Tournament;
@@ -29,26 +30,20 @@ public class NameTeamsController{
     private ListView<String> listOfTeams;
     @FXML
     private Button startButton, addButton;
-
     @FXML
     private TextField playerNameField, teamNameField, playerOne, playerTwo;
-
     @FXML
     private Label teamChooser, teamNameLabel;
-
     @FXML
     private ChoiceBox<Integer> numberOfTeamsChoiceBox;
     @FXML
     private Button confirm;
-
     @FXML
     private AnchorPane numberOfTeamsAnchor, doublesAnchor;
-
     @FXML
     private Rectangle rectangle;
 
     private Tournament tournament;
-
 
     /**
      * Initializing the scene.
@@ -160,7 +155,6 @@ public class NameTeamsController{
      * Changes the GUI for the user
      *
      */
-
     private void setAllTeamsAdded(){
         startButton.setVisible(true);
         rectangle.setVisible(true);
@@ -176,9 +170,8 @@ public class NameTeamsController{
      * Takes different input if the tournament is doubles
      *
      * @return The team
-     * @throws IllegalArgumentException
+     * @throws IllegalArgumentException Throws an exception if the players is not given full names
      */
-
     private Team createTeam()throws IllegalArgumentException{
         if (tournament.isDoubles()){
             return new Team(teamNameField.getText(), createPlayer(playerOne), createPlayer(playerTwo));
@@ -192,7 +185,6 @@ public class NameTeamsController{
      * @return returns a new Player by using the input
      * @throws IllegalArgumentException Throws an exception if the player is not given a full name
      */
-
     private Player createPlayer(TextField textfield)throws IllegalArgumentException {
         String[] list = textfield.getText().split(" ");
         if (list.length < 2){throw new IllegalArgumentException("Player needs a full name!");}
@@ -216,19 +208,19 @@ public class NameTeamsController{
 
         switch (listOfTeams.getItems().size()) {
             case 4 -> {
-                loader = new FXMLLoader(getClass().getResource("/edu/ntnu/k2g3/idatt1002/tournament4.fxml"));
+                loader = new FXMLLoader(Main.class.getResource("tournament4.fxml"));
                 root = loader.load();
                 Tournament4Controller controller = loader.getController();
                 controller.setTournament(this.tournament);
             }
             case 8 -> {
-                loader = new FXMLLoader(getClass().getResource("/edu/ntnu/k2g3/idatt1002/tournament8.fxml"));
+                loader = new FXMLLoader(Main.class.getResource("tournament8.fxml"));
                 root = loader.load();
                 Tournament8Controller controller8 = loader.getController();
                 controller8.setTournament(this.tournament);
             }
             case 16 -> {
-                loader = new FXMLLoader(getClass().getResource("/edu/ntnu/k2g3/idatt1002/tournament16.fxml"));
+                loader = new FXMLLoader(Main.class.getResource("tournament16.fxml"));
                 root = loader.load();
                 Tournament16Controller controller16 = loader.getController();
                 controller16.setTournament(this.tournament);
